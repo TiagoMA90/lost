@@ -6,12 +6,52 @@ import time
 logtime = datetime.now()
 
 def plateau():
-    print("It's a long walk. I should get back to you in you, in a minute.")
+    print("It's a long walk, and very hot in the open. I should get back to you in a minute.")
     time.sleep(30)
     print("Great, i am back. Good to know you waited for me. I finally reached the checkpoint.")
-    print("Do you want to hear the good news or bad news?")
+    time.sleep(3)
+    print("Do you want to hear the good news or bad news? I assume both.")
+    time.sleep(3)
     print("I found part of my crew... Davies and Laurent.")
+    time.sleep(4)
     print("Those are the bad news... They are dead.")
+    print("The good news is, I found the a ration kit. This should suffice till we reach the shuttle.")
+    time.sleep(2)
+    print("It requires a password... Laurents pad has a note...")
+    print("It reads...")
+    time.sleep(5)
+    print("DOWNLOADING DATA...")
+    print(" ")
+    print(datetime.now() + timedelta(days=-2, hours=-10))
+    print("'Be careful, something sinister dwells in this ecosystem.'")
+    print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
+    print("'I also to retrieve the ration kit from the scarppyard, but all is left are left overs for a week'")
+    print("'If you want to open it, it is the 6th constellation sign of the Zodiac, planet Earth.'")
+    print("'Careful not to mistype it else it will selfdestruct, with you included. I had to arm it... You have two tries.'")
+    print("'The stars, so bright... I think I will lie down here for a while... - Martin Laurent'")
+    rationkit()
+
+
+def rationkit():
+    secretword = "VIRGO"
+    guess = ""
+    guesscount = 0
+    guesslimit = 2
+    outofguesses = False
+
+    while guess != secretword and not(outofguesses):
+        if guesscount < guesslimit:
+            guess = input("Password: ")
+            guesscount = guesscount + 1
+        else:
+            outofguesses = True
+
+    if outofguesses:
+        print("You lost")
+    else:
+        print("You unlocked the door")
+
+
 
 def pact():
     time.sleep(2)
@@ -26,7 +66,7 @@ def pact():
     print("Not that it matters, this is futile information now...")
     time.sleep(3)
     
-    print("Uploading Data...")
+    print("DOWNLOADING DATA...")
     print("............................")
     print("Name: Ernst, Klaus")
     print("Age: 50")
@@ -36,21 +76,21 @@ def pact():
     time.sleep(2)
     print("............................")
     print("Name: Fujin, Akira")
-    print("Age: 29")
+    print("Age: 32")
     print("Planet: Earth, JP")
     print("Duty: Geologist")
     print("Status: Dead")
     time.sleep(3)
     print("............................")
     print("Name: Davies, Emma")
-    print("Age: 44")
+    print("Age: 33")
     print("Planet: Earth, EN")
     print("Duty: Anthropologist")
     print("Status: Dead")
     time.sleep(3)
     print("............................")
     print("Name: Laurent, Martin")
-    print("Age: 32")
+    print("Age: 44")
     print("Planet: Earth, FR")
     print("Duty: Photo/Videographer ")
     print("Status: Dead")
@@ -77,14 +117,15 @@ def pact():
     print("Status: Dead")
     print("............................")
     time.sleep(2)
-    print("Upload complete")
+    print("DOWNLOAD COMPLETE")
+    print("............................")
     time.sleep(4)
     print()
-    print("Yes, the Captain is still missing...")
+    print("The Captain is still missing...")
     time.sleep(2)
-    print("I must find him, in order to leave this place.")
+    print("I should find him, in order to leave this place.")
     time.sleep(5)
-    print("Looks like I arrived to my checkpoint...")
+    print("Looks like I arrived at my checkpoint...")
     print("From here on, I should choose a route... The Cave or th Plateau? (Plateau / Cave)")
     act_two = input("")
     act_two = act_two.upper()
@@ -112,7 +153,7 @@ def start():
     print("A pick up vessel was supposed to dock this morning and pick us up... Except, it never landed...")
     print("There was another incident last week, I dont know what happened...")
     time.sleep(3)
-    print("I woke dizzy in my pod and my team disapeared...")
+    print("I woke up dizzy in my pod and my team disapeared...")
     print("Crew status indicates they are dead, with the exception of the Captain...")
     time.sleep(1)
     print("Our internal hardware is damaged and I cannot salvage anything from our station...")
