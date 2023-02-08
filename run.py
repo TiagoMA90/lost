@@ -19,38 +19,149 @@ def plateau():
     time.sleep(2)
     print("It requires a password... Laurents pad has a note...")
     print("It reads...")
-    time.sleep(5)
-    print("DOWNLOADING DATA...")
     print(" ")
+    time.sleep(5)
+    print("----------------------------------------------------------------------------------------------------")
+    print("DOWNLOADING DATA...")
+    print("----------------------------------------------------------------------------------------------------")
     print(datetime.now() + timedelta(days=-2, hours=-10))
     print("'Be careful, something sinister dwells in this ecosystem.'")
     print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
-    print("'I also to retrieve the ration kit from the scarppyard, but all is left are left overs for a week'")
+    print("'I also retrieved the ration kit from the scrapyard, there is some food left...'")
     print("'If you want to open it, it is the 6th constellation sign of the Zodiac, planet Earth.'")
-    print("'Careful not to mistype it else it will selfdestruct, with you included. I had to arm it... You have two tries.'")
-    print("'The stars, so bright... I think I will lie down here for a while... - Martin Laurent'")
+    print("'Careful not to mistype it else it will selfdestruct, with you included.")
+    print("I had to arm it... You have two tries, before it explodes.'")
+    print("'The stars, so bright... I think I will lie down here for a while...'")
+    print("- Martin Laurent")
+    print("----------------------------------------------------------------------------------------------------")
+    
     rationkit()
-
+    cave()
 
 def rationkit():
-    secretword = "VIRGO"
+    password = "VIRGO"
     guess = ""
-    guesscount = 0
-    guesslimit = 2
-    outofguesses = False
+    countguess = 0
+    maxguess = 2
+    outofguess = False
 
-    while guess != secretword and not(outofguesses):
-        if guesscount < guesslimit:
+    while guess != password and not(outofguess):
+        if countguess < maxguess:
             guess = input("Password: ")
-            guesscount = guesscount + 1
+            guess = guess.upper()
+            countguess = countguess + 1
         else:
-            outofguesses = True
+            outofguess = True
 
-    if outofguesses:
-        print("You lost")
+    if outofguess:
+        print("Connection lost...")
+        print("Reconnecting...")
+        time.sleep(2)
+        print("Reconnecting...")
+        time.sleep(3)
+        print("Failed to connect")
+        time.sleep(3)
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print("GAME OVER")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
     else:
-        print("You unlocked the door")
+        print("The rationkit has been unlocked")
+        print("")
+        print("This should come in handy")
 
+def cave():
+    print("Very well then... I shall enter the the depths of this cave")
+    time.sleep(5)
+    print("There is something here. I can hear it... it is issing from affar.")
+    time.sleep(4)
+    print("Rather creepy? Can't make scence from where is coming from.")
+    time.sleep(6)
+    print("Hardly any light in here, but I see an opening at the end of the tunel.")
+    time.sleep(3)
+    print("I am surprised the connection is good in here....")
+    time.sleep(3)
+    print("On my way towards the exit...")
+    print("Wait. What is this?...")
+    time.sleep(5)
+    print("The smell of blood... the metalic scent...")
+    time.sleep(2)
+    print("I found part of my crew, what happened in here? Fujin was shot dead...Van Beek whatever happened to him, as if he died of sickness")
+    time.sleep(5)
+    print("Whatever happened to them... I don't want to happen to me.")
+    print("I should keep moving... But wait, I can perhaps take their gun.")
+    time.sleep(3)
+    print("It requires a password though... to remove it, from Van Beeks holster...")
+    print("There is a note... I a uploading to you...")  
+    print("")
+    print("----------------------------------------------------------------------------------------------------")
+    print("DOWNLOADING DATA...")
+    print("----------------------------------------------------------------------------------------------------")
+    print(datetime.now() + timedelta(days=-5, hours=-5))
+    print("'This Fujin guy, is flipping out. He insists the only gun onboard belongs to him and to himself only... while my life gets to depend on him.'")
+    print("'Who put him in charge? He doesn't let anyone near it... The selfish bastard... When he least exects, I will grab it.'")
+    print("'He thinks he has everything covered... I saw him changing the password for the holster, it is the anthropolists first name...'")
+    print("'He had a crush on her since we made preparations in Mars...'")
+    print("'Mars... Earth... Home... I haven't been there since I've been working for SIGMA-02.'")
+    print("'It doesn't matter now. I need to get that gun. I must fend myself against whatever is in this cave.' - Van Beek")
+    print("----------------------------------------------------------------------------------------------------")
+    print("I should have a few tries before I attract unwanted attenrion.")
+
+    gunholster()
+
+def gunholster():
+    password = "EMMA"
+    guess = ""
+    countguess = 0
+    maxguess = 3
+    outofguess = False
+
+    while guess != password and not(outofguess):
+        if countguess < maxguess:
+            guess = input("Password: ")
+            guess = guess.upper()
+            countguess = countguess + 1
+        else:
+            outofguess = True
+
+    if outofguess:
+        print("Oh no!... No WAIT!")
+        print("Connection lost...")
+        time.sleep(2)
+        print("Reconnecting...")
+        print("Failed to connect")
+        time.sleep(3)
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print("GAME OVER")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+    else:
+        print("The holster has been unlocked")
+        print("")
+        print("Never used a gun before, but should be easy to shoot right?")
+        time.sleep(2)
+        print("Wait... something is strange. There is no sound... Everything is too quiet.")
+        time.sleep(4)
+        print("I can no longer hear or feel the droplets of water falling down from the ceiling...")
+        time.sleep(5)
+        print("The issing is gone... No screeching at all.")
+        time.sleep(1)
+        print("Should I run or quietly move towards the exit? (Run/Sneak/Shoot)")
 
 
 def pact():
@@ -65,7 +176,8 @@ def pact():
     print("I'll be uploading data profiles to you...")
     print("Not that it matters, this is futile information now...")
     time.sleep(3)
-    
+    print(" ")
+    print("............................")
     print("DOWNLOADING DATA...")
     print("............................")
     print("Name: Ernst, Klaus")
@@ -115,10 +227,11 @@ def pact():
     print("Planet: Earth, BE")
     print("Duty: Lead Research")
     print("Status: Dead")
-    print("............................")
     time.sleep(2)
+    print("............................")
     print("DOWNLOAD COMPLETE")
     print("............................")
+    print("")
     time.sleep(4)
     print()
     print("The Captain is still missing...")
@@ -127,11 +240,11 @@ def pact():
     time.sleep(5)
     print("Looks like I arrived at my checkpoint...")
     print("From here on, I should choose a route... The Cave or th Plateau? (Plateau / Cave)")
-    act_two = input("")
-    act_two = act_two.upper()
-    if act_two == "PLATEAU" or act_one == "P" or act_one == "TAKE THE PLATEAU" or act_one == "GO TO THE PLATEAU":
+    act_one = input("")
+    act_one = act_one.upper()
+    if act_one == "PLATEAU" or act_one == "P" or act_one == "TAKE THE PLATEAU" or act_one == "GO TO THE PLATEAU":
             plateau()
-    elif act_two == "CAVE" or act_two == "TAKE THE CAVE" or act_two == "GO INSIDE THE GAVE" or act_two == "GO THROUGH THE CAVE":
+    elif act_one == "CAVE" or act_one == "TAKE THE CAVE" or act_one == "GO INSIDE THE GAVE" or act_one == "GO THROUGH THE CAVE":
             cave()
             
 
@@ -146,14 +259,15 @@ def start():
     time.sleep(1)
     print("I have been trying to contact you guys for days.")
     time.sleep(2)
-    print(f"Listen " + name + " ... I am the deployed documenter, Diaz... I am the sole survivour of SIGMA-02, Planet 9 - Research team.")
+    print(f"Listen " + name + " ... I am the deployed documenter, Diaz... I am the sole survivour of SIGMA-02, Planet-9 - Research team.")
     time.sleep(2)
-    print("Me and my crew disembarked from Earth en route to Planet 9 two months ago, our ship GAMMA crashed...")
+    print("Me and my crew disembarked from Mars en route to Planet-9 two months ago, our ship GAMMA crashed...")
     time.sleep(3)
-    print("A pick up vessel was supposed to dock this morning and pick us up... Except, it never landed...")
+    print("An SOS pick up vessel was supposed to dock a few days and pick us up... Except, it never landed...")
     print("There was another incident last week, I dont know what happened...")
     time.sleep(3)
-    print("I woke up dizzy in my pod and my team disapeared...")
+    print("I woke up dizzy in my pod, Ernst was found dead by the dinner table and the rest of team disapeared...")
+    print("It was him who closed our Pods, before he started his shift.")
     print("Crew status indicates they are dead, with the exception of the Captain...")
     time.sleep(1)
     print("Our internal hardware is damaged and I cannot salvage anything from our station...")
@@ -201,7 +315,7 @@ print("                                                                         
 print("                                      ㄥㄖ丂ㄒ                                               ")
 print("                                                                                            ")
 print(" ")
-print(".̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞.͙̣̳͎..̲̫̱͇.͎͓̘...̙̦͓̭͙.̝ͅ.̩.̹͓ͅ.̳͇͕.̤̹.̮̥̻.̣̤̫.̻̞̯.̗͖̦̟̮.̖.̻.͍̱ͅ...̹͚͎.̗̜̞.̰.̙̩̲͍.̫̳̮̱.̱̰͕͉..̳.͓͖͖.̗.̞̮̣̰̣.͚̭.͓̩.̞͕̼ͅ.̼̫.̠͙̪..̰̤̙̗.̰̰̳.̺̬̜̯̰.̠͕͕̠.̠̭͖.͓͉̮̹.͔͕̮..̪.̤̯̘̭.͎̣̮.̫̯̫.͚̜̙.͚̦..͎̟.͇.̱̺.̰͖̖̗̠..̮..̫͚.̰ͅ.̥̜͙̫̘.̰͎͖.̹̼̞̤͈.̻̙͎.͕̗̼̺̬.̞̘...̲͈.̼̳..̦̖̣̳͈.")
+print(".̫̳̮̱.̱̰͕͉..̳.͓͖͖.̗.̞̮̣̰̣.͚̭.͓̩.̞͕̼ͅ.̼̫.̠͙̪.͇.̱̺.̰͖̖̗̠..̮..̫͚.̰ͅ.̥̜͙̫̘.̰͎͖.̹̼̞̤͈.̻̙͎.͕̗̼̺̬.̞̘...̲͈.̼̳..̦̖̣̳͈..̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞.͙̣̳͎..̲̫̱͇.͎͓̘...̙̦͓̭͙.̝ͅ.̩.̹͓ͅ.̳͇͕.̤̹.̮̥̻.̣̤̫..̰̤̙̗.̰̰̳.̺̬̜̯̰.̠͕͕̠.̠̭͖.͓͉̮̹.͔͕̮..̪.̤̯̘̭.͎̣̮.̫̯̫.͚̜̙.͚̦..͎̟.̻̞̯.̗͖̦̟̮.̖.̻.͍̱ͅ...̹͚͎.̗̜̞.̰.̙̩̲͍")
 print(" ")
 time.sleep(2)
 print(" ")
