@@ -73,9 +73,27 @@ def rationkit():
         print(" ")
         print(" ")
     else:
-        print("The rationkit has been unlocked")
+        print("The ration kit has been unlocked")
         print("")
-        print("This should come in handy")
+        print("This should help me on my journey.")
+
+def fightorflee():
+    caveencounter = input("")
+    caveencounter = caveencounter.upper()
+    if caveencounter == "RUN" or caveencounter == "run" or caveencounter == "SPRINT" or caveencounter == "RUN TOWARDS THE EXIT":
+        print("OK... I am running, I AM RUNNING!!!")
+    elif caveencounter == "SNEAK" or caveencounter == "CRAWL" or caveencounter == "STEALTH" or caveencounter == "MOVE QUIETLY":
+        print("Very well... I'll move quietly...")
+        print("Perhaps it won't hear me...")
+        print("It's hrd to see... I feel breathing on my neck...")
+        print("What is this?... NO WAIT!!!")
+        print("GAME OVER make a function here")
+    else:
+        print("This is a shot in the dark. If I miss I am dead...")
+        print("I saw it, the flash. The horror!")
+        print("GAME OVER make a function here")
+
+
 
 def cave():
     print("Very well then... I shall enter the the depths of this cave")
@@ -93,9 +111,9 @@ def cave():
     time.sleep(5)
     print("The smell of blood... the metalic scent...")
     time.sleep(2)
-    print("I found part of my crew, what happened in here? Fujin was shot dead...Van Beek whatever happened to him, as if he died of sickness")
+    print("I found part of my crew, what happened in here? Fujin was shot dead...Van Beek whatever happened to him, he has no wounds.")
     time.sleep(5)
-    print("Whatever happened to them... I don't want to happen to me.")
+    print("What happened to them... I don't want to happen to me.")
     print("I should keep moving... But wait, I can perhaps take their gun.")
     time.sleep(3)
     print("It requires a password though... to remove it, from Van Beeks holster...")
@@ -112,7 +130,7 @@ def cave():
     print("'Mars... Earth... Home... I haven't been there since I've been working for SIGMA-02.'")
     print("'It doesn't matter now. I need to get that gun. I must fend myself against whatever is in this cave.' - Van Beek")
     print("----------------------------------------------------------------------------------------------------")
-    print("I should have a few tries before I attract unwanted attenrion.")
+    print("I should have a few tries before I attract unwanted attention.")
 
     gunholster()
 
@@ -143,7 +161,7 @@ def gunholster():
         print(" ")
         print(" ")
         print(" ")
-        print("GAME OVER")
+        print("GAME OVER make a function here")
         print(" ")
         print(" ")
         print(" ")
@@ -159,9 +177,10 @@ def gunholster():
         time.sleep(4)
         print("I can no longer hear or feel the droplets of water falling down from the ceiling...")
         time.sleep(5)
-        print("The issing is gone... No screeching at all.")
+        print("The issing is gone... and... no screeching at all.")
         time.sleep(1)
         print("Should I run or quietly move towards the exit? (Run/Sneak/Shoot)")
+        fightorflee()
 
 
 def pact():
