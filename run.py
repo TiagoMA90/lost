@@ -2,6 +2,7 @@ from datetime import date
 from datetime import datetime
 from datetime import timedelta
 import time
+import random
 
 logtime = datetime.now()
 
@@ -73,9 +74,26 @@ def rationkit():
         print(" ")
         print(" ")
     else:
-        print("The ration kit has been unlocked")
+        print("The rationkit has been unlocked")
         print("")
         print("This should help me on my journey.")
+        
+
+
+def risk():
+    outcome = ["hit", "miss"]
+    shot = random.choice(outcome)
+
+    if shot == "hit":
+        print("I shot it!!!")
+        time.sleep(2)
+        print("I think I made it angry! I should run!it ran off. I better keep going!")
+    else:
+        print("Damn...I missed it! It only had two bullets!")
+        time.sleep(1)
+        print("I saw it in a flash. The horror...")
+        time.sleep(3)
+        print("GAME OVER make a function here")
 
 def fightorflee():
     caveencounter = input("")
@@ -84,27 +102,32 @@ def fightorflee():
         print("OK... I am running, I AM RUNNING!!!")
     elif caveencounter == "SNEAK" or caveencounter == "CRAWL" or caveencounter == "STEALTH" or caveencounter == "MOVE QUIETLY":
         print("Very well... I'll move quietly...")
+        time.sleep(5)
         print("Perhaps it won't hear me...")
-        print("It's hrd to see... I feel breathing on my neck...")
+        time.sleep(3)
+        print("It's hard to see... I feel warm breathing on my neck...")
         print("What is this?... NO WAIT!!!")
         print("GAME OVER make a function here")
     else:
         print("This is a shot in the dark. If I miss I am dead...")
-        print("I saw it, the flash. The horror!")
-        print("GAME OVER make a function here")
-
-
+        risk()
 
 def cave():
     print("Very well then... I shall enter the the depths of this cave")
     time.sleep(5)
-    print("There is something here. I can hear it... it is issing from affar.")
+    print("I wonder if this was a wise decision...")
+    time.sleep(5)
+    print("can't see much... The air is cold... and the soil is wet.")
+    time.sleep(7)
+    print("What was that?!!...")
+    time.sleep(5)
+    print("There is something in here... I can hear it... it is issing from affar.")
     time.sleep(4)
-    print("Rather creepy? Can't make scence from where is coming from.")
+    print("Rather creepy... Can't make scence from where is coming from.")
     time.sleep(6)
     print("Hardly any light in here, but I see an opening at the end of the tunel.")
     time.sleep(3)
-    print("I am surprised the connection is good in here....")
+    print("I am surprised the connection is still good in here....")
     time.sleep(3)
     print("On my way towards the exit...")
     print("Wait. What is this?...")
