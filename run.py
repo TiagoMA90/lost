@@ -105,7 +105,7 @@ def fightorflee():
         time.sleep(5)
         print("Perhaps it won't hear me...")
         time.sleep(3)
-        print("It's hard to see... I feel warm breathing on my neck...")
+        print("It's hard to see... I feel a cold breeze over my neck...")
         print("What is this?... NO WAIT!!!")
         print("GAME OVER make a function here")
     else:
