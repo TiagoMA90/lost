@@ -28,48 +28,8 @@ def pits():
 
 
 
-
-def plateau():
-    print("It's a long walk, and very hot in the open. I should get back to you in a minute.")
-    time.sleep(30)
-    print("Great, I am back. Good to know you waited for me. I finally reached the checkpoint.")
-    time.sleep(3)
-    print("Do you want to hear the good news or bad news? Well, I assume both...")
-    time.sleep(3)
-    print("The good news... I found part of my crew... Davies and Laurent.")
-    time.sleep(4)
-    print("The bad news... They are dead. But not just dead,  they didn't die of starvation...")
-    print("They had more than enough food for the both of them.")
-    print("They died of something extraordinary... like a sickness or an infection...")
-    print("Their faces... horrific.")
-    time.sleep(5)
-    print("Anyway...")
-    time.sleep(3)
-    print("I found the a ration kit by their camp. This should suffice till we reach the shuttle.")
-    time.sleep(2)
-    print("It requires a password... Laurents pad has a note...")
-    print("It reads...")
-    print(" ")
-    time.sleep(5)
-    print("----------------------------------------------------------------------------------------------------")
-    print("DOWNLOADING DATA...")
-    print("----------------------------------------------------------------------------------------------------")
-    print(datetime.now() + timedelta(days=-2, hours=-10))
-    print("'Be careful, something sinister dwells in this ecosystem.'")
-    print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
-    print("'I also retrieved the ration kit from the scrapyard, there is some food left...'")
-    print("'If you want to open it, it is the 6th constellation sign of the Zodiac, planet Earth.'")
-    print("'Careful not to mistype it else it will selfdestruct, with you included.")
-    print("I had to arm it... You have two tries, before it explodes.'")
-    print("'The stars, so bright... I think I will lie down here for a while...'")
-    print("- Martin Laurent")
-    print("----------------------------------------------------------------------------------------------------")
-    
-    rationkit()
-    cave()
-
 def rationkit():
-    password = "VIRGO"
+    password = "virgo"
     guess = ""
     countguess = 0
     maxguess = 2
@@ -78,7 +38,7 @@ def rationkit():
     while guess != password and not(outofguess):
         if countguess < maxguess:
             guess = input("Password: ")
-            guess = guess.upper()
+            guess = guess.lower()
             countguess = countguess + 1
         else:
             outofguess = True
@@ -118,6 +78,44 @@ def rationkit():
         pits()
 
 
+def plateau():
+    print("It's a long walk, and very hot in the open. I should get back to you in a minute.")
+    time.sleep(30)
+    print("Great, I am back. Good to know you waited for me. I finally reached the checkpoint.")
+    time.sleep(3)
+    print("Do you want to hear the good news or bad news? Well, I assume both...")
+    time.sleep(3)
+    print("The good news... I found part of my crew... Davies and Laurent.")
+    time.sleep(4)
+    print("The bad news... They are dead. But not just dead,  they didn't die of starvation...")
+    print("They had more than enough food for the both of them.")
+    print("They died of something extraordinary... like a sickness or an infection...")
+    print("Their faces... horrific.")
+    time.sleep(5)
+    print("Anyway...")
+    time.sleep(3)
+    print("I found the a ration kit by their camp. This should suffice till we reach the shuttle.")
+    time.sleep(2)
+    print("It requires a password... Laurents pad has a note...")
+    print("It reads...")
+    print(" ")
+    time.sleep(5)
+    print("----------------------------------------------------------------------------------------------------")
+    print("DOWNLOADING DATA...")
+    print("----------------------------------------------------------------------------------------------------")
+    print(datetime.now() + timedelta(days=-2, hours=-10))
+    print("'Be careful, something sinister dwells in this ecosystem.'")
+    print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
+    print("'I also retrieved the ration kit from the scrapyard, there is some food left...'")
+    print("'If you want to open it, it is the 6th constellation sign of the Zodiac, planet Earth.'")
+    print("'Careful not to mistype it else it will selfdestruct, with you included.")
+    print("I had to arm it... You have two tries, before it explodes.'")
+    print("'The stars, so bright... I think I will lie down here for a while...'")
+    print("- Martin Laurent")
+    print("----------------------------------------------------------------------------------------------------")
+    
+    rationkit()
+
 
 def risk():
     outcome = ["hit", "miss"]
@@ -148,7 +146,7 @@ def risk():
 
 def fightorflee():
     caveencounter = input("")
-    caveencounter = caveencounter.upper()
+    caveencounter = caveencounter.lower()
     if caveencounter == "RUN" or caveencounter == "run" or caveencounter == "SPRINT" or caveencounter == "RUN TOWARDS THE EXIT":
         print("OK... I am running, I AM RUNNING!!!")
     elif caveencounter == "SNEAK" or caveencounter == "CRAWL" or caveencounter == "STEALTH" or caveencounter == "MOVE QUIETLY":
@@ -164,6 +162,57 @@ def fightorflee():
         print("Steady...")
 
         risk()
+
+def gunholster():
+    password = "emma"
+    guess = ""
+    countguess = 0
+    maxguess = 3
+    outofguess = False
+
+    while guess != password and not(outofguess):
+        if countguess < maxguess:
+            guess = input("Password: ")
+            guess = guess.lower()
+            countguess = countguess + 1
+        else:
+            outofguess = True
+
+    if outofguess:
+        print("Oh no!... No WAIT!")
+        print("Connection lost...")
+        time.sleep(2)
+        print("Reconnecting...")
+        print("Failed to connect")
+        time.sleep(3)
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print("GAME OVER make a function here")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+        print(" ")
+    else:
+        print("The holster has been unlocked")
+        print("")
+        print("I never used a gun before, but should be easy to shoot right?")
+        time.sleep(4)
+        print("Wait... something is strange...")
+        time.sleep(3)
+        print("The ground silent and the air is still... Everything is too quiet.")
+        time.sleep(4)
+        print("I can no longer hear or feel the droplets of water falling down from the ceiling...")
+        time.sleep(5)
+        print("The issing is gone... and... no screeching from afar.")
+        time.sleep(1)
+        print("Should I run, move quietly move towards the exit or shoot? (run/sneak/shoot)")
+        fightorflee()
+
 
 def cave():
     print("Very well then... I shall enter the the depths of this cave")
@@ -212,55 +261,6 @@ def cave():
 
     gunholster()
 
-def gunholster():
-    password = "EMMA"
-    guess = ""
-    countguess = 0
-    maxguess = 3
-    outofguess = False
-
-    while guess != password and not(outofguess):
-        if countguess < maxguess:
-            guess = input("Password: ")
-            guess = guess.upper()
-            countguess = countguess + 1
-        else:
-            outofguess = True
-
-    if outofguess:
-        print("Oh no!... No WAIT!")
-        print("Connection lost...")
-        time.sleep(2)
-        print("Reconnecting...")
-        print("Failed to connect")
-        time.sleep(3)
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print("GAME OVER make a function here")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-    else:
-        print("The holster has been unlocked")
-        print("")
-        print("I never used a gun before, but should be easy to shoot right?")
-        time.sleep(4)
-        print("Wait... something is strange...")
-        time.sleep(3)
-        print("The ground silent and the air is still... Everything is too quiet.")
-        time.sleep(4)
-        print("I can no longer hear or feel the droplets of water falling down from the ceiling...")
-        time.sleep(5)
-        print("The issing is gone... and... no screeching from afar.")
-        time.sleep(1)
-        print("Should I run, move quietly move towards the exit or shoot? (run/sneak/shoot)")
-        fightorflee()
 
 
 def pact():
@@ -340,10 +340,10 @@ def pact():
     print("Looks like I arrived at my checkpoint...")
     print("From here on, I should choose a route... The Cave or the Plateau? (plateau/cave)")
     pathway = input("")
-    pathway = act_one.upper()
-    if pathway == "PLATEAU" or pathway == "P" or pathway == "TAKE THE PLATEAU" or pathway == "GO TO THE PLATEAU":
+    pathway = pathway.lower()
+    if pathway == "plateau" or pathway == "p" or pathway == "take the plateau" or pathway == "go to the plateau" or pathway == "go through the plateau":
             plateau()
-    elif pathway == "CAVE" or pathway == "TAKE THE CAVE" or pathway == "GO INSIDE THE GAVE" or pathway == "GO THROUGH THE CAVE":
+    elif pathway == "cave" or pathway == "c" or pathway == "take the cave" or pathway == "go inside the cave" or pathway == "go through the cave":
             cave()
             
 
@@ -385,7 +385,7 @@ def start():
     time.sleep(1)
     print("Can you stay online and help me? (yes/no)")
     act_one = input("")
-    act_one = act_one.upper()
+    act_one = act_one.lower()
     if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you":
             pact()
     elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
@@ -435,8 +435,8 @@ print("")
 
 print("Accept transmission? (accept/decline)") 
 startgame = input("")
-startgame = startgame.upper()
-if startgame == "YES" or startgame == "Y" or startgame == "ACCEPT":
+startgame = startgame.lower()
+if startgame == "yes" or startgame == "y" or startgame == "accept":
     start()
-elif startgame == "NO" or startgame == "N" or startgame == "DECLINE":
+elif startgame == "no" or startgame == "n" or startgame == "decline":
     print("Call Declined")
