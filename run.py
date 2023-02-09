@@ -6,6 +6,52 @@ import random
 
 logtime = datetime.now()
 
+def takeoff():
+    print("I just heard a gunshot behind the pits... Captain?")
+>>>>>>>>>>>>>>>>>>>>>>ENDING
+
+def shuttle():
+>>>>>>>>>>>>>>>>>>>>>>PUZZLE
+
+
+def finaldeed():
+    decisionmaker = input("")
+    decisionmaker = decisionmaker.lower()
+    if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
+        print("You better know what I am doing... I will give him my gun, in exchange for the key card...")
+        time.sleep(2)
+        print("I don't know what he will do with that gun... There was only one bullet in that gun...")
+        time.sleep(5)
+        print("Oh... I see now... I guess his time was coming...")
+        time.sleep(1)
+        print("Lets get a move on. The shuttle is just ahead!")
+        time.sleep(5)
+        print(" ")
+        print("Connection lost...")
+        time.sleep(1)
+        print("Reconnecting...")
+        time.sleep(2)
+        print("Reconnecting...")
+        print("Connection established")
+        print(" ")
+        
+        shuttle()
+
+
+    elif decisionmaker == "shoot" or decisionmaker == "shoot him dead" or decisionmaker == "kill" or decisionmaker == "kill him":
+        print("It's the last bullet... I better know what I am doing...")
+        print("I wonder if putting him out of his misery is the correct thing to do.")
+        time.sleep(2)
+        print("Will this make me a murderer? I guess there is no other way. Everyone for himself.")
+        time.sleep(7)
+        print("I killed him...")
+        time.sleep(3)
+        print("This is on both of us" + name +". My actions are a reflection of your decisions.")
+        time.sleep(5)
+        print("Let's get the key and never look back... The shuttle is just ahead...")
+        time.sleep(2)
+        print("Great... it requires a password...")
+>>>>>>>>>>>>>>>>>>>>>>>><PUZZLE
 
 def settlement():
     takeaction = input("")
@@ -15,11 +61,16 @@ def settlement():
         time.sleep(2)
         print("I pointed the gun at him!")
         time.sleep(6)
-        print("Is he nuts? He is exchanging the shuttle key card for the my gun...")
+        print("Is he nuts? He made a proposal, the key card of the shittle for the my gun...")
         time.sleep(4)
-        print("Like I am going to give it to him, so he can kill me and run away...")
-        print("You are my guide here, what do you think I should do? (kill him and take the key / trade the gun for the key)")
-        >>>>>>>>>>>>>>>>>key function
+        print("If I give him the gun, he will kill me and take the shuttle... nonsense...")
+        time.sleep(2)
+        print("I could just kill him and take the key for myself, but I am not a murderer...")
+        print("You are my guide here...")
+        time.sleep(1)
+        print("what do you think I should do? (kill him and take the key / trade the gun for the key)")
+        
+        finaldeed()
 
 
     elif takeaction == "shoot" or takeaction == "shoot him dead" or takeaction == "kill" or takeaction == "kill him":
