@@ -7,17 +7,59 @@ import random
 logtime = datetime.now()
 
 
+def settlement():
+    takeaction = input("")
+    takeaction = takeaction.lower()
+    if takeaction == "threaten" or takeaction == "threaten him" or takeaction == "threat" or takeaction == "point the gun at him":
+        print("I'll insist...")
+        time.sleep(2)
+        print("I pointed the gun at him!")
+        time.sleep(6)
+        print("Is he nuts? He is exchanging the shuttle key card for the my gun...")
+        time.sleep(4)
+        print("Like I am going to give it to him, so he can kill me and run away...")
+        print("You are my guide here, what do you think I should do? (kill him and take the key / trade the gun for the key)")
+        >>>>>>>>>>>>>>>>>key function
+
+
+    elif takeaction == "shoot" or takeaction == "shoot him dead" or takeaction == "kill" or takeaction == "kill him":
+        print("It's the last bullet... I better know what I am doing...")
+        print("I wonder if putting him out of his misery is the correct thing to do.")
+        time.sleep(2)
+        print("Will this make me a murderer? I guess there is no other way. Everyone for himself.")
+        time.sleep(7)
+        print("I killed him...")
+        time.sleep(3)
+        print("This is on both of us" + name +". My actions are a reflection of your decisions.")
+        time.sleep(5)
+        print("Let's get the key and never look back.")
+        time.sleep(2)
+        >>>>>>>>>>>>key function
+
+
 def pits():
     print("It's very wind here...")
+    print(" ")
+    print("Connection lost...")
+    time.sleep(1)
+    print("Reconnecting...")
+    time.sleep(2)
+    print("Reconnecting...")
+    print("Connection established")
+    print(" ")
     time.sleep(4)
     print("It should take a while to find a safe zone...")
     time.sleep(5)
     print("There is something moving in the distance... someone...")
+    print(" ")
     print("Connection lost...")
+    time.sleep(1)
     print("Reconnecting...")
-    time.sleep(2)
+    time.sleep(3)
     print("Reconnecting...")
-    time.sleep(9)accept
+    print("Connection established")
+    print(" ")
+    time.sleep(6)
     print("Don't lose on me now.")
     time.sleep(2)
     print("Someone is coming this way...")
@@ -25,6 +67,19 @@ def pits():
     print("Is that the Captain Salazar?")
     time.sleep(2)
     print("Great, he has the keycard, so... perhaps no need to bypass the ignition panels.")
+    print("He looks very ill...")
+    time.sleep(10)
+    print("Hey " + name + "... The Captain is out of his head...")
+    time.sleep(1)
+    print("There is only one passenger seat in that emergency shuttle... and he carries the key card")
+    time.sleep(4)
+    print("He insists the shuttle is his ticket home and everyone for himself...")
+    rime.sleep(5)
+    print("The egoistic bastard... is infected... He is as good as dead... there is no cure for what he has.")
+    print("How should I confront him? (threaten him/shoot him dead)")
+    time.sleep(3)
+
+    settlement()
 
 
 
@@ -63,7 +118,7 @@ def rationkit():
         print(" ")
         print(" ")
     else:
-        print("The rationkit has been unlocked")
+        print("The ration kit has been unlocked")
         print("")
         print("This should help me on my journey.")
         time.sleep(2)
@@ -138,18 +193,25 @@ def risk():
         pits()
         
     else:
-        print("Damn...I missed it! It only had two bullets!")
-        time.sleep(1)
         print("I saw it in a flash. The horror...")
+        time.sleep(1)
+        print("Damn...I missed it! No more bullets...!")
         time.sleep(3)
         print("GAME OVER make a function here")
+
+
 
 def fightorflee():
     caveencounter = input("")
     caveencounter = caveencounter.lower()
-    if caveencounter == "RUN" or caveencounter == "run" or caveencounter == "SPRINT" or caveencounter == "RUN TOWARDS THE EXIT":
+    if caveencounter == "run" or caveencounter == "r" or caveencounter == "run away" or caveencounter == "run towards the exit":
         print("OK... I am running, I AM RUNNING!!!")
-    elif caveencounter == "SNEAK" or caveencounter == "CRAWL" or caveencounter == "STEALTH" or caveencounter == "MOVE QUIETLY":
+        time.sleep(10)
+        print("I made it... I made it to the exit!")
+
+        pits()
+
+    elif caveencounter == "sneak" or caveencounter == "sneak past it" or caveencounter == "stealth" or caveencounter == "move quietly":
         print("Very well... I'll move quietly...")
         time.sleep(5)
         print("Perhaps it won't hear me...")
@@ -210,7 +272,7 @@ def gunholster():
         time.sleep(5)
         print("The issing is gone... and... no screeching from afar.")
         time.sleep(1)
-        print("Should I run, move quietly move towards the exit or shoot? (run/sneak/shoot)")
+        print("Should I run, move quietly move towards the exit or shoot? (run / sneak / shoot)")
         fightorflee()
 
 
@@ -338,7 +400,7 @@ def pact():
     print("I oughta find him, in order to leave this place.")
     time.sleep(5)
     print("Looks like I arrived at my checkpoint...")
-    print("From here on, I should choose a route... The Cave or the Plateau? (plateau/cave)")
+    print("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
     pathway = input("")
     pathway = pathway.lower()
     if pathway == "plateau" or pathway == "p" or pathway == "take the plateau" or pathway == "go to the plateau" or pathway == "go through the plateau":
@@ -383,7 +445,7 @@ def start():
     time.sleep(2)
     print("I need to get out of here. That is why they sent you right?")
     time.sleep(1)
-    print("Can you stay online and help me? (yes/no)")
+    print("Can you stay online and help me? (yes / no)")
     act_one = input("")
     act_one = act_one.lower()
     if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you":
@@ -433,7 +495,7 @@ time.sleep(1)
 print("Hello?! Anybody there?")
 print("")
 
-print("Accept transmission? (accept/decline)") 
+print("Accept transmission? (accept / decline)") 
 startgame = input("")
 startgame = startgame.lower()
 if startgame == "yes" or startgame == "y" or startgame == "accept":
