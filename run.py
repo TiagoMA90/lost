@@ -7,7 +7,14 @@ import random
 logtime = datetime.now()
 
 def takeoff():
-    print("WRITE THE FINAL ACT AND ADD A COUNTDOWN")
+    print("Ready for take off!")
+    for countdown in range(9, 0, -1):
+        print(countdown)
+        time.sleep(1)
+    print(" ")
+    print(" ")
+    print(" ")
+    print(" THE END ")
 
 def shuttle():
     print("Here I am, I found the Emergency shuttle.")
@@ -20,6 +27,11 @@ def shuttle():
     print("So far, so good.")
     time.sleep(3)
     print("It requires a password...")
+    time.sleep(1)
+    print("I must input the correct numbers, as in this schematics.")
+    time.sleep(3)
+    print("Hang on a second, I am uploading the data to you...")
+    print("We should have two tries... else we will have system shutdown.")
     print("WRITE A PUZZLE BEFORE takeoff()")
 
     takeoff()
