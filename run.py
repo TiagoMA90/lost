@@ -7,23 +7,22 @@ import random
 logtime = datetime.now()
 
 def takeoff():
-    print("I just heard a gunshot behind the pits... Captain?")
->>>>>>>>>>>>>>>>>>>>>>ENDING
+    pass
 
 def shuttle():
->>>>>>>>>>>>>>>>>>>>>>PUZZLE
+    print("Great... it requires a password...")
 
 
 def finaldeed():
     decisionmaker = input("")
     decisionmaker = decisionmaker.lower()
     if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
-        print("You better know what I am doing... I will give him my gun, in exchange for the key card...")
+        print("You better know what I am doing... I will give him my gun for the key card...")
         time.sleep(2)
+        print("He thanked me... He seemed desperate to have it...")
+        time.sleep(3)
         print("I don't know what he will do with that gun... There was only one bullet in that gun...")
-        time.sleep(5)
-        print("Oh... I see now... I guess his time was coming...")
-        time.sleep(1)
+        time.sleep(2)
         print("Lets get a move on. The shuttle is just ahead!")
         time.sleep(5)
         print(" ")
@@ -34,6 +33,12 @@ def finaldeed():
         print("Reconnecting...")
         print("Connection established")
         print(" ")
+        print("I just heard a gunshot behind the pits... Captain?")
+        time.sleep(2)
+        print("Oh... I see now...")
+        time.sleep(4)
+        print("The shuttle is just ahead.")
+        time.sleep(5)
         
         shuttle()
 
@@ -42,16 +47,16 @@ def finaldeed():
         print("It's the last bullet... I better know what I am doing...")
         print("I wonder if putting him out of his misery is the correct thing to do.")
         time.sleep(2)
-        print("Will this make me a murderer? I guess there is no other way. Everyone for himself.")
+        print("Will this make me a murderer? I guess there is no other way. Everyone for himself, right?")
         time.sleep(7)
         print("I killed him...")
         time.sleep(3)
-        print("This is on both of us" + name +". My actions are a reflection of your decisions.")
+        print("This is on both of us. My actions are a reflection of your decisions.")
         time.sleep(5)
         print("Let's get the key and never look back... The shuttle is just ahead...")
-        time.sleep(2)
-        print("Great... it requires a password...")
->>>>>>>>>>>>>>>>>>>>>>>><PUZZLE
+        time.sleep(5)
+        
+        shuttle()
 
 def settlement():
     takeaction = input("")
@@ -61,14 +66,14 @@ def settlement():
         time.sleep(2)
         print("I pointed the gun at him!")
         time.sleep(6)
-        print("Is he nuts? He made a proposal, the key card of the shittle for the my gun...")
+        print("Is he nuts? He made a proposal, the key card of the shuttle in exchange for my gun...")
         time.sleep(4)
-        print("If I give him the gun, he will kill me and take the shuttle... nonsense...")
+        print("If I give up the gun, he will kill me and take the shuttle... nonsense...")
         time.sleep(2)
-        print("I could just kill him and take the key for myself, but I am not a murderer...")
+        print("I could just kill him and take the key for myself, but... I am not a murderer...")
         print("You are my guide here...")
         time.sleep(1)
-        print("what do you think I should do? (kill him and take the key / trade the gun for the key)")
+        print("What do you think I should do? (kill him and take the key / trade the gun for the key)")
         
         finaldeed()
 
@@ -81,11 +86,12 @@ def settlement():
         time.sleep(7)
         print("I killed him...")
         time.sleep(3)
-        print("This is on both of us" + name +". My actions are a reflection of your decisions.")
+        print("This is on both of us. My actions are a reflection of your decisions.")
         time.sleep(5)
         print("Let's get the key and never look back.")
         time.sleep(2)
-        >>>>>>>>>>>>key function
+        
+        shuttle()
 
 
 def pits():
@@ -101,6 +107,8 @@ def pits():
     time.sleep(4)
     print("It should take a while to find a safe zone...")
     time.sleep(5)
+    print("hang on...")
+    time.sleep(3)
     print("There is something moving in the distance... someone...")
     print(" ")
     print("Connection lost...")
@@ -111,22 +119,25 @@ def pits():
     print("Connection established")
     print(" ")
     time.sleep(6)
-    print("Don't lose on me now.")
+    print("Don't die on me now.")
     time.sleep(2)
     print("Someone is coming this way...")
     time.sleep(3)
-    print("Is that the Captain Salazar?")
+    print("Is that the Captain?")
     time.sleep(2)
     print("Great, he has the keycard, so... perhaps no need to bypass the ignition panels.")
-    print("He looks very ill...")
-    time.sleep(10)
-    print("Hey " + name + "... The Captain is out of his head...")
+    print("He looks very ill... I'll get back to you once I speak with him")
+    time.sleep(15)
+    print("The Captain is out of his head...")
     time.sleep(1)
     print("There is only one passenger seat in that emergency shuttle... and he carries the key card")
-    time.sleep(4)
+    time.sleep(2)
     print("He insists the shuttle is his ticket home and everyone for himself...")
-    rime.sleep(5)
+    time.sleep(5)
+    print("I understand his point of view, but should I stand ground and submit to his demands???")
+    time.sleep(2)
     print("The egoistic bastard... is infected... He is as good as dead... there is no cure for what he has.")
+    time.sleep(1)
     print("How should I confront him? (threaten him/shoot him dead)")
     time.sleep(3)
 
@@ -134,7 +145,7 @@ def pits():
 
 
 
-def rationkit():
+def powercells():
     password = "virgo"
     guess = ""
     countguess = 0
@@ -169,7 +180,7 @@ def rationkit():
         print(" ")
         print(" ")
     else:
-        print("The ration kit has been unlocked")
+        print("The power cells have been been disarmed")
         print("")
         print("This should help me on my journey.")
         time.sleep(2)
@@ -179,7 +190,7 @@ def rationkit():
         time.sleep(3)
         print("The view is rather spectacular, but very hot up here, No wonder there is no nightime in this planet...")
         time.sleep(2)
-        print("I can see see the pits from up here. I'll get back to you once I get updates.")
+        print("I can see the pits from up here. I'll get back to you once I get more updates.")
         
         pits()
 
@@ -191,18 +202,21 @@ def plateau():
     time.sleep(3)
     print("Do you want to hear the good news or bad news? Well, I assume both...")
     time.sleep(3)
-    print("The good news... I found part of my crew... Davies and Laurent.")
+    print("The good news is... I found part of my crew... Davies and Laurent.")
     time.sleep(4)
-    print("The bad news... They are dead. But not just dead,  they didn't die of starvation...")
-    print("They had more than enough food for the both of them.")
-    print("They died of something extraordinary... like a sickness or an infection...")
+    print("The bad news... They are dead. But not just dead...")
+    time.sleep(3)
+    print("Their faces are full of fungus... infested by an infection.")
+    times.sleep(4)
+    print("They died of something extraordinary... like a sickness or some sort...")
+    time.sleep(2)
     print("Their faces... horrific.")
     time.sleep(5)
     print("Anyway...")
     time.sleep(3)
-    print("I found the a ration kit by their camp. This should suffice till we reach the shuttle.")
+    print("I found the a power cells for the shuttle by their camp. This should suffice, till we reach our next destination.")
     time.sleep(2)
-    print("It requires a password... Laurents pad has a note...")
+    print("It requires a password in order to unock it... Laurents pad has a note...")
     print("It reads...")
     print(" ")
     time.sleep(5)
@@ -212,15 +226,15 @@ def plateau():
     print(datetime.now() + timedelta(days=-2, hours=-10))
     print("'Be careful, something sinister dwells in this ecosystem.'")
     print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
-    print("'I also retrieved the ration kit from the scrapyard, there is some food left...'")
-    print("'If you want to open it, it is the 6th constellation sign of the Zodiac, planet Earth.'")
+    print("'I also retrieved the power cells from the scrapyard, there is also some food left...'")
+    print("'If you want to open it the kit, containing the cells, it should be the 6th constellation sign of the Zodiac, planet Earth.'")
     print("'Careful not to mistype it else it will selfdestruct, with you included.")
-    print("I had to arm it... You have two tries, before it explodes.'")
+    print("'I had to arm it, because of Van Beek... You have two tries, before it explodes.'")
     print("'The stars, so bright... I think I will lie down here for a while...'")
     print("- Martin Laurent")
     print("----------------------------------------------------------------------------------------------------")
     
-    rationkit()
+    powercells()
 
 
 def risk():
@@ -229,11 +243,11 @@ def risk():
     if shot == "hit":
         print("I shot it!!!")
         time.sleep(2)
-        print("But, it ran off! I better keep going!")
-        time.sleep(8)
-        print("Here we are... I need to take a breath...")
+        print("But, it ran off! I better make my way to the exit!")
         time.sleep(5)
         print("I managed to reach the exit... How I missed the sun...")
+        time.sleep(8)
+        print("I need to take a breath...")
         print(4)
         print("Whatever that thing was... it go hold of them...")
         print("I still have one bullet left...")
@@ -259,6 +273,8 @@ def fightorflee():
         print("OK... I am running, I AM RUNNING!!!")
         time.sleep(10)
         print("I made it... I made it to the exit!")
+        time.sleep(2)
+        print("It's after me!")
 
         pits()
 
@@ -271,7 +287,7 @@ def fightorflee():
         print("What is this?... NO WAIT!!!")
         print("GAME OVER make a function here")
     else:
-        print("This is a shot in the dark. If I miss I am dead...")
+        print("This is a shot in the dark. If I miss, I am dead...")
         print("Steady...")
 
         risk()
@@ -317,11 +333,11 @@ def gunholster():
         time.sleep(4)
         print("Wait... something is strange...")
         time.sleep(3)
-        print("The ground silent and the air is still... Everything is too quiet.")
+        print("The ground is silent and the air is still... Everything is too quiet.")
         time.sleep(4)
         print("I can no longer hear or feel the droplets of water falling down from the ceiling...")
         time.sleep(5)
-        print("The issing is gone... and... no screeching from afar.")
+        print("The issing is gone...")
         time.sleep(1)
         print("Should I run, move quietly move towards the exit or shoot? (run / sneak / shoot)")
         fightorflee()
@@ -333,10 +349,16 @@ def cave():
     print("I wonder if this was a wise decision...")
     time.sleep(5)
     print("Can't see much... The air is cold... and the soil is wet.")
+    time.sleep(2)
+    print("It echoes in here, I can hears drops of water... Could this mean life???")
     time.sleep(7)
     print("What was that?!!...")
+    time.sleep(3)
+    print("The darkness must be playing tricks on me...")
+    time.sleep(2)
+    print("Ever felt like there is someone watching you?")
     time.sleep(6)
-    print("There is something in here... I can hear it... it is issing from affar.")
+    print("There is definetly something in here... I can hear it... it is issing from afar.")
     time.sleep(4)
     print("Rather creepy... Can't make scence from where is coming from.")
     time.sleep(7)
@@ -352,12 +374,12 @@ def cave():
     print("I found part of my crew, what happened in here???")
     print("Fujin was shot dead...Van Beek whatever happened to him, he has no wounds, but has an infection all over his face.")
     time.sleep(5)
-    print("What happened to them... I don't want to happen to me.")
+    print("What happened to them...")
     time.sleep(2)
     print("I should keep moving... But wait... I can perhaps take their gun.")
     time.sleep(3)
     print("It requires a password... to remove it from from Van Beeks holster...")
-    print("There is a note... I am uploading to you...")  
+    print("There is a note... I am uploading it to you...")  
     print("")
     print("----------------------------------------------------------------------------------------------------")
     print("DOWNLOADING DATA...")
@@ -378,7 +400,7 @@ def cave():
 
 def pact():
     time.sleep(2)
-    print("Great. Very well. I need you to help me navigate to the emergency Shuttle.")
+    print("Great. Very well. I need you to help me navigate to the Emergency Shuttle.")
     time.sleep(1)
     print("It detached 24km southwest from here, should take a few hours from where I stand.")
     print("My GPS is damaged..., but you should be able to guide me through this ecosystem.")
@@ -448,8 +470,14 @@ def pact():
     print()
     print("The Captain is still missing...")
     time.sleep(2)
-    print("I oughta find him, in order to leave this place.")
+    print("I oughta find him, in order to leave this place. He should have the key card for the shuttle.")
     time.sleep(5)
+    print("Anyway...")
+    time.sleep(4)
+    print("This planet is far from ready for colonization... the air ir toxic and the soil unarable... we know that now...")
+    time.sleep(2)
+    print("We haven't found any life forms around... this should be more than enough to conclude that this plamet is dead.")
+    time.sleep(3)
     print("Looks like I arrived at my checkpoint...")
     print("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
     pathway = input("")
@@ -497,8 +525,8 @@ def start():
     print("I need to get out of here. That is why they sent you right?")
     time.sleep(1)
     print("Can you stay online and help me? (yes / no)")
-    act_one = input("")
-    act_one = act_one.lower()
+    response = input("")
+    response = response.lower()
     if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you":
             pact()
     elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
