@@ -7,11 +7,22 @@ import random
 logtime = datetime.now()
 
 def takeoff():
-    print("WRITE THE FINAL ACT AND ADD COUNTDOWN")
+    print("WRITE THE FINAL ACT AND ADD A COUNTDOWN")
 
 def shuttle():
-    print("Great... it requires a password...")
+    print("Here I am, I found the Emergency shuttle.")
+    time.sleep(2)
+    print("The power cells are in place.")
+    time.sleep(1)
+    print("I just need to power the ignition panels.")
+    print("A log in is requiered to access the sytsems...")
+    time.sleep(2)
+    print("So far, so good.")
+    time.sleep(3)
+    print("It requires a password...")
     print("WRITE A PUZZLE BEFORE takeoff()")
+
+    takeoff()
 
 
 def negotiation():
@@ -309,7 +320,7 @@ def risk():
         time.sleep(2)
         print("But, it ran off! I better make my way to the exit!")
         time.sleep(5)
-        print("I managed to reach the exit... How I missed the sun...")
+        print("I managed to reach the exit... How I missed the sunlight...")
         time.sleep(8)
         print("I need to take a breath...")
         print(4)
@@ -336,10 +347,10 @@ def fightorflee():
     if caveencounter == "run" or caveencounter == "r" or caveencounter == "run away" or caveencounter == "run towards the exit":
         print("OK... I am running, I AM RUNNING!!!")
         time.sleep(10)
-        print("I made it... I made it to the exit!")
-        time.sleep(2)
         print("It's after me!")
-
+        time.sleep(2)
+        print("I made it... I made it to the exit!")
+        print("I can see the pits from down here. I'll contact you once I get to my next checkpoint.")
         pits()
 
     elif caveencounter == "sneak" or caveencounter == "sneak past it" or caveencounter == "stealth" or caveencounter == "move quietly":
@@ -391,7 +402,7 @@ def gunholster():
         print(" ")
         print(" ")
     else:
-        print("The holster has been unlocked")
+        print("'"The holster has been unlocked"')
         print("")
         print("I never used a gun before, but should be easy to shoot right?")
         time.sleep(4)
@@ -403,12 +414,12 @@ def gunholster():
         time.sleep(5)
         print("The issing is gone...")
         time.sleep(1)
-        print("Should I run, move quietly move towards the exit or shoot? (run / sneak / shoot)")
+        print("Should I run, move quietly towards the exit or shoot my way through? (run / sneak / shoot)")
         fightorflee()
 
 
 def cave():
-    print("Very well then... I shall enter the the depths of this cave")
+    print("Very well then... I shall enter the depths of this cave")
     time.sleep(5)
     print("I wonder if this was a wise decision...")
     time.sleep(5)
@@ -443,7 +454,7 @@ def cave():
     print("I should keep moving... But wait... I can perhaps take their gun.")
     time.sleep(3)
     print("It requires a password... to remove it from from Van Beeks holster...")
-    print("There is a note... I am uploading it to you...")  
+    print("There is a note... I am uploading it to you, right now...")  
     print("")
     print("----------------------------------------------------------------------------------------------------")
     print("DOWNLOADING DATA...")
