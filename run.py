@@ -13,11 +13,77 @@ def shuttle():
     print("Great... it requires a password...")
 
 
+def negotiation():
+    standup = input("")
+    standup = standup.lower()
+    if takeaction == "threaten" or standup == "threaten him" or standup == "threat" or standup == "arm the keycard":
+        time.sleep(2)
+        print("I armed the keycard! I am dead either way.")
+        time.sleep(4)
+        print("If I give up the keycard, he would take off and leave me here... nonsense...")
+        time.sleep(2)
+        print("I could just kill him and take the keycard for myself, but... I am not a murderer...")
+        print("You are my guide here...")
+        time.sleep(1)
+        print("What do you think I should do? (Tackl him / trade the gun for the key)")
+        
+        finaldeed()
+
+def pitsalt():
+    print("It's very wind here...")
+    print(" ")
+    print("Connection lost...")
+    time.sleep(1)
+    print("Reconnecting...")
+    time.sleep(2)
+    print("Reconnecting...")
+    print("Connection established")
+    print(" ")
+    time.sleep(4)
+    print("It should take a while to find a safe zone...")
+    time.sleep(5)
+    print("Hang on...")
+    time.sleep(3)
+    print("There is something moving in the distance... someone...")
+    print(" ")
+    print("Connection lost...")
+    time.sleep(1)
+    print("Reconnecting...")
+    time.sleep(3)
+    print("Reconnecting...")
+    print("Connection established")
+    print(" ")
+    time.sleep(6)
+    print("Don't die on me now.")
+    time.sleep(2)
+    print("Someone is coming this way...")
+    time.sleep(3)
+    print("Is that the Captain?")
+    time.sleep(2)
+    print("Great, he has the keycard, so... perhaps no need to bypass the ignition panels.")
+    print("He looks very ill... I'll get back to you once I speak with him")
+    time.sleep(15)
+    print("The Captain is out of his head...")
+    time.sleep(1)
+    print("There is only one passenger seat in that emergency shuttle... and he has the keycard")
+    time.sleep(2)
+    print("He insists the shuttle is his ticket home and everyone for himself...")
+    time.sleep(5)
+    print("Wait! He has a gun... and is demanding the keycard from me.")
+    time.sleep(2)
+    print("The egoistic bastard... he is also infected... He is as good as dead... there is no cure for what he has.")
+    time.sleep(1)
+    print("What should I do? (threaten him/arm the keycard)")
+    time.sleep(3)
+
+    negotiation()
+
+
 def finaldeed():
     decisionmaker = input("")
     decisionmaker = decisionmaker.lower()
     if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
-        print("You better know what I am doing... I will give him my gun for the key card...")
+        print("You better know what I am doing... I will give him my gun for the keycard...")
         time.sleep(2)
         print("He thanked me... He seemed desperate to have it...")
         time.sleep(3)
@@ -53,7 +119,7 @@ def finaldeed():
         time.sleep(3)
         print("This is on both of us. My actions are a reflection of your decisions.")
         time.sleep(5)
-        print("Let's get the key and never look back... The shuttle is just ahead...")
+        print("Let's get the keycard and never look back... The shuttle is just ahead...")
         time.sleep(5)
         
         shuttle()
@@ -66,14 +132,14 @@ def settlement():
         time.sleep(2)
         print("I pointed the gun at him!")
         time.sleep(6)
-        print("Is he nuts? He made a proposal, the key card of the shuttle in exchange for my gun...")
+        print("Is he nuts? He made a proposal, the keycard of the shuttle in exchange for my gun...")
         time.sleep(4)
         print("If I give up the gun, he will kill me and take the shuttle... nonsense...")
         time.sleep(2)
-        print("I could just kill him and take the key for myself, but... I am not a murderer...")
+        print("I could just kill him and take the keycard for myself, but... I am not a murderer...")
         print("You are my guide here...")
         time.sleep(1)
-        print("What do you think I should do? (kill him and take the key / trade the gun for the key)")
+        print("What do you think I should do? (kill him and take the keycard / trade the gun for the key)")
         
         finaldeed()
 
@@ -88,7 +154,7 @@ def settlement():
         time.sleep(3)
         print("This is on both of us. My actions are a reflection of your decisions.")
         time.sleep(5)
-        print("Let's get the key and never look back.")
+        print("Let's get the keycard and never look back.")
         time.sleep(2)
         
         shuttle()
@@ -130,13 +196,13 @@ def pits():
     time.sleep(15)
     print("The Captain is out of his head...")
     time.sleep(1)
-    print("There is only one passenger seat in that emergency shuttle... and he carries the key card")
+    print("There is only one passenger seat in that emergency shuttle... and he carries the card")
     time.sleep(2)
     print("He insists the shuttle is his ticket home and everyone for himself...")
     time.sleep(5)
     print("I understand his point of view, but should I stand ground and submit to his demands???")
     time.sleep(2)
-    print("The egoistic bastard... is infected... He is as good as dead... there is no cure for what he has.")
+    print("The egoistic bastard... he is also infected... He is as good as dead... there is no cure for what he has.")
     time.sleep(1)
     print("How should I confront him? (threaten him/shoot him dead)")
     time.sleep(3)
@@ -145,7 +211,7 @@ def pits():
 
 
 
-def powercells():
+def keycard():
     password = "virgo"
     guess = ""
     countguess = 0
@@ -180,9 +246,9 @@ def powercells():
         print(" ")
         print(" ")
     else:
-        print("The power cells have been been disarmed")
+        print("The keycard has been been disarmed")
         print("")
-        print("This should help me on my journey.")
+        print("This should ignite the shuttle.")
         time.sleep(2)
         print("I'll walk a little further...")
         time.sleep(4)
@@ -214,7 +280,7 @@ def plateau():
     time.sleep(5)
     print("Anyway...")
     time.sleep(3)
-    print("I found the a power cells for the shuttle by their camp. This should suffice, till we reach our next destination.")
+    print("I found the keycard for the shuttle by their camp. This should come in handy, till we reach our next destination.")
     time.sleep(2)
     print("It requires a password in order to unock it... Laurents pad has a note...")
     print("It reads...")
@@ -226,15 +292,15 @@ def plateau():
     print(datetime.now() + timedelta(days=-2, hours=-10))
     print("'Be careful, something sinister dwells in this ecosystem.'")
     print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
-    print("'I also retrieved the power cells from the scrapyard, there is also some food left...'")
-    print("'If you want to open it the kit, containing the cells, it should be the 6th constellation sign of the Zodiac, planet Earth.'")
-    print("'Careful not to mistype it else it will selfdestruct, with you included.")
+    print("'I also retrieved the keycard from the scrapyard, there is also some food left...'")
+    print("'If you want to open it the kit, containing the keycard, it should be the 6th constellation sign of the Zodiac, planet Earth.'")
+    print("'Careful not to mistype it else it will selfdestruct, with you included. The blast can be fatal.")
     print("'I had to arm it, because of Van Beek... You have two tries, before it explodes.'")
     print("'The stars, so bright... I think I will lie down here for a while...'")
     print("- Martin Laurent")
     print("----------------------------------------------------------------------------------------------------")
     
-    powercells()
+    keycard()
 
 
 def risk():
@@ -470,7 +536,7 @@ def pact():
     print()
     print("The Captain is still missing...")
     time.sleep(2)
-    print("I oughta find him, in order to leave this place. He should have the key card for the shuttle.")
+    print("I oughta find him, in order to leave this place. He should have the keycard for the shuttle.")
     time.sleep(5)
     print("Anyway...")
     time.sleep(4)
