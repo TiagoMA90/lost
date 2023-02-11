@@ -7,10 +7,11 @@ import random
 logtime = datetime.now()
 
 def takeoff():
-    pass
+    print("WRITE THE FINAL ACT AND ADD COUNTDOWN")
 
 def shuttle():
     print("Great... it requires a password...")
+    print("WRITE A PUZZLE BEFORE takeoff()")
 
 
 def negotiation():
@@ -22,10 +23,7 @@ def negotiation():
         time.sleep(4)
         print("If I give up the keycard, he would take off and leave me here... nonsense...")
         time.sleep(2)
-        print("I could just kill him and take the keycard for myself, but... I am not a murderer...")
-        print("You are my guide here...")
-        time.sleep(1)
-        print("What do you think I should do? (Tackl him / trade the gun for the key)")
+        print("UPDATE STORYLINE and OPTIONS HERE for pitsalt()")
         
         finaldeed()
 
@@ -73,7 +71,7 @@ def pitsalt():
     time.sleep(2)
     print("The egoistic bastard... he is also infected... He is as good as dead... there is no cure for what he has.")
     time.sleep(1)
-    print("What should I do? (threaten him/arm the keycard)")
+    print("What should I do? (threaten him / give up the keycard / arm the keycard)")
     time.sleep(3)
 
     negotiation()
@@ -272,8 +270,8 @@ def plateau():
     time.sleep(4)
     print("The bad news... They are dead. But not just dead...")
     time.sleep(3)
-    print("Their faces are full of fungus... infested by an infection.")
-    times.sleep(4)
+    print("Their faces are full of fungus... infested by mold... an infection.")
+    time.sleep(4)
     print("They died of something extraordinary... like a sickness or some sort...")
     time.sleep(2)
     print("Their faces... horrific.")
@@ -540,9 +538,9 @@ def pact():
     time.sleep(5)
     print("Anyway...")
     time.sleep(4)
-    print("This planet is far from ready for colonization... the air ir toxic and the soil unarable... we know that now...")
+    print("This planet is far from ready for colonization... the air is toxic and the soil unarable... we know that now...")
     time.sleep(2)
-    print("We haven't found any life forms around... this should be more than enough to conclude that this plamet is dead.")
+    print("We haven't found any life forms around... this should be more than enough to conclude that Planet-9 is dead.")
     time.sleep(3)
     print("Looks like I arrived at my checkpoint...")
     print("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
