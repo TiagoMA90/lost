@@ -75,6 +75,7 @@ def shuttle():
     time.sleep(2)
     print("Don't mess this up, else the system will be locked. We don't have an engineer to unlock it.")
     print("GIVE A CLUE TO THE PASSWORD PUZZLE HERE")
+
     puzzle()
 
 def negotiation():
@@ -454,7 +455,7 @@ def gunholster():
         print(" ")
         print(" ")
     else:
-        print("'"The holster has been unlocked"')
+        print('"The holster has been unlocked"')
         print("")
         print("I never used a gun before, but should be easy to shoot right?")
         time.sleep(4)
