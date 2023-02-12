@@ -7,6 +7,16 @@ import random
 logtime = datetime.now()
 
 def takeoff():
+    print("Great! So far, so good.")
+    time.sleep(3)
+    print("The systems are running...")
+    time.sleep(1)
+    print("I must input the correct numbers, as in this schematics.")
+    time.sleep(3)
+    print("Hang on a second, I am uploading the data to you...")
+    print("We should have two tries... before  permanent system shutdown.")
+    print("CREATE ONE LAST PUZZLE HERE")
+
     print("Ready for take off!")
     for countdown in range(9, 0, -1):
         print(countdown)
@@ -16,26 +26,56 @@ def takeoff():
     print(" ")
     print(" THE END ")
 
+
+def puzzle():
+    login = ("magellan")
+    password = login
+    underline = ["*", "*", "*", "*", "*", "*", "*", "*"]
+    entry = []
+    attempts = 5
+    correct = 0
+
+    print("*"*len(password))
+
+    while True:
+        print("Input characters:")
+        characters = str(input("Characater: "))
+        entry.append(characters)
+    
+        if password == "magellan":
+            if characters in password:
+                underline[password.index(characters)] = (characters)
+                print(underline)
+                correct += 1
+            else:
+                print("This is the incorrect character!")
+                attempts -= 1
+                print("Remaining tries {}". format(attempts))
+                if attempts <= 0:
+                    print("GAME OVER")
+                    break
+                if correct == 7:
+                    print('"Access granted to system"')
+                    break
+                    print("Bingo!, you unlocked it! Wait a second... ")
+
+                    takeoff()
+
+
 def shuttle():
     print("Here I am, I found the Emergency shuttle.")
     time.sleep(2)
     print("The power cells are in place.")
     time.sleep(1)
-    print("I just need to power the ignition panels.")
-    print("A log in is requiered to access the sytsems...")
+    print("I just need to power up the ignition panels.")
+    time.sleep(5)
+    print("The power is on!")
     time.sleep(2)
-    print("So far, so good.")
-    time.sleep(3)
-    print("It requires a password...")
-    time.sleep(1)
-    print("I must input the correct numbers, as in this schematics.")
-    time.sleep(3)
-    print("Hang on a second, I am uploading the data to you...")
-    print("We should have two tries... else we will have system shutdown.")
-    print("WRITE A PUZZLE BEFORE takeoff()")
-
-    takeoff()
-
+    print("A log in is requiered to access the systems...")
+    time.sleep(2)
+    print("Don't mess this up, else the system will be locked. We don't have an engineer to unlock it.")
+    print("GIVE A CLUE TO THE PASSWORD PUZZLE HERE")
+    puzzle()
 
 def negotiation():
     standup = input("")
