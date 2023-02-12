@@ -6,6 +6,29 @@ import random
 
 logtime = datetime.now()
 
+def gameover():
+        print("Connection lost...")
+        time.sleep(2)
+        print("Reconnecting...")
+        print("Failed to connect")
+        time.sleep(3)
+        print(" ")
+        print('"Diaz died..."')
+        print(" ")
+        print(" ")
+        print(" ")
+        print("GAME OVER")
+        print(" ")
+        print(" ")
+        print(" ")
+        print('"Retry (yes / no)"')
+        print(" ")
+        print(" ")
+        if gameover == "yes" or startgame == "y" or startgame == "accept":
+            start()
+        elif startgame == "no" or startgame == "n" or startgame == "decline":
+            print("Call Declined")
+
 def takeoff():
     print("Great! So far, so good.")
     time.sleep(3)
@@ -436,24 +459,7 @@ def gunholster():
             outofguess = True
 
     if outofguess:
-        print("Oh no!... No WAIT!")
-        print("Connection lost...")
-        time.sleep(2)
-        print("Reconnecting...")
-        print("Failed to connect")
-        time.sleep(3)
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print("GAME OVER make a function here")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
-        print(" ")
+        gameover()
     else:
         print('"The holster has been unlocked"')
         print("")
