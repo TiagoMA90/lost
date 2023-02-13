@@ -74,15 +74,14 @@ def puzzle():
                 print("This is the incorrect character!")
                 attempts -= 1
                 print("Remaining tries {}". format(attempts))
-                if attempts <= 0:
-                    print("GAME OVER")
-                    break
-                if correct == 7:
-                    print('"Access granted to system"')
-                    break
-                    print("Bingo!, you unlocked it! Wait a second... ")
+            if attempts <= 0:
+                gameover()
+            if correct == 7:
+                print('"Access granted to system"')
+                time.sleep(2)
+                print("Bingo!, you unlocked it! Wait a second... ")
 
-                    takeoff()
+                takeoff()
 
 
 def shuttle():
@@ -623,7 +622,7 @@ def start():
     time.sleep(1)
     print("I have been trying to contact you guys for days.")
     time.sleep(2)
-    print(f"Listen " + name + " ... I am the deployed documenter, Diaz... I am the sole survivour of SIGMA-02, Planet-9 - Research team.")
+    print("Listen " + name + " ... I am the deployed documenter, Diaz... I am the sole survivour of SIGMA-02, Planet-9 - Research team.")
     time.sleep(2)
     print("Me and my crew disembarked from Mars en route to Planet-9 two months ago, our ship GAMMA crashed...")
     time.sleep(3)
