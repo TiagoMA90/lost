@@ -29,17 +29,7 @@ def gameover():
         elif startgame == "no" or startgame == "n" or startgame == "decline":
             print('"Call Declined"')
 
-def takeoff():
-    print("Great! So far, so good.")
-    time.sleep(3)
-    print("The systems are running...")
-    time.sleep(1)
-    print("I must input the correct numbers, as in this schematics.")
-    time.sleep(3)
-    print("Hang on a second, I am uploading the data to you...")
-    print("We should have two tries... before  permanent system shutdown.")
-    print("CREATE ONE LAST PUZZLE HERE")
-
+def coutdown():
     print("Ready for take off!")
     for countdown in range(9, 0, -1):
         print(countdown)
@@ -48,6 +38,44 @@ def takeoff():
     print(" ")
     print(" ")
     print(" THE END ")
+
+
+def getaway():
+    board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+    def display_board():
+        print("? |" + " A:" + "| " + "B:" + "| " + "C:")
+        print("D:| " + str(board[0]) + " | " + str(board[1]) + " | " + str(board[2]))
+        print("E:| " + str(board[3]) + " | " + str(board[4]) + " | " + str(board[5]))
+        print("F:| " + str(board[6]) + " | " + str(board[7]) + " | " + str(board[8]))
+        
+    def playgame():
+        display_board()
+        position = input("Input the position ")
+        position = int(position)
+        board[position] = "X"
+        
+        if position == 7:
+            countdown()
+        else:
+            gameover()
+    
+    playgame()
+
+def takeoff():
+    print("Great! So far, so good.")
+    time.sleep(3)
+    print("The systems are running...")
+    time.sleep(1)
+    print("I must input the correct number, as in this schematics.")
+    time.sleep(3)
+    print("Hang on a second, I am uploading the data to you...")
+    time.sleep(4)
+    print("We should have two tries... before  permanent system shutdown.")
+    time.sleep(2)
+    print("have you seen anything like it? Which one is the execution number?")
+
+    getaway()
 
 
 def puzzle():
@@ -677,7 +705,7 @@ def start():
     print("An SOS pick up vessel was supposed to dock a few days and pick us up... Except, it never landed...")
     print("There was another incident last week, I dont know what happened...")
     time.sleep(3)
-    print("I woke up dizzy in my pod, Ernst was found dead by the dinner table with a hand written note on his hand 'AD + BF + CE'. The rest of team disapeared...")
+    print("I woke up dizzy in my pod, Ernst was found dead by the dinner table with a hand written note on his hand 'F + B = ?'. The rest of team disapeared...")
     print("It was him who closed our Pods, before the start of his shift.")
     print("Crew status indicates they are dead, with the exception of the Captain...")
     time.sleep(1)
