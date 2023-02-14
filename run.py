@@ -132,53 +132,53 @@ def negotiation():
     captainscore = 0
     diazscore = 0
 
-while True:
-    hands = ["Rock", "Paper", "Scissors"]
-    captain = random.choice(hands)
-    diaz = input("Which hand should I play? ").capitalize()
-    
-    if diazscore == 2:
-        print("I beat him!!!...")
-        time.sleep(3)
-        print("Does this mean...")
-        time.sleep(2)
-        print("I refused to accept his gun. But he let me go.")
-        time.sleep(5)
-        print("")
-        break
-    elif captainscore == 2:
-        gameover()
-        break
+    while True:
+        hands = ["Rock", "Paper", "Scissors"]
+        captain = random.choice(hands)
+        diaz = input("Which hand should I play? ").capitalize()
         
-    if diaz == captain:
-        print("Captain: ", captain)
-        print("Diaz: ", diaz)
-        print()
-        print("I tied against the Captain, we have to go again.")
-    elif diaz == "Rock" and captain == "Scissors":
-        print("Captain: ", captain)
-        print("Diaz: ", diaz)
-        print()
-        print("I won this round against the Captain!")
-        diazscore += 1
-    elif diaz == "Paper" and captain == "Rock":
-        print("Captain: ", captain)
-        print("Diaz: ", diaz)
-        print()
-        print("I beat him this round!")
-        diazscore += 1
-    elif diaz == "Scissors" and captain == "Paper":
-        print("Captain: ", captain)
-        print("Diaz: ", diaz)
-        print()
-        print("The Captain lost this round!")
-        diazscore += 1
-    else:
-        print("Captain: ", captain)
-        print("Diaz: ", diaz)
-        print()
-        print("I lost!")
-        captainscore += 1
+        if diazscore == 2:
+            print("I beat him!!!...")
+            time.sleep(3)
+            print("Does this mean...")
+            time.sleep(2)
+            print("I refused to accept his gun. But he let me go.")
+            time.sleep(5)
+            print("")
+            break
+        elif captainscore == 2:
+            gameover()
+            break
+            
+        if diaz == captain:
+            print("Captain: ", captain)
+            print("Diaz: ", diaz)
+            print()
+            print("I tied against the Captain, we have to go again.")
+        elif diaz == "Rock" and captain == "Scissors":
+            print("Captain: ", captain)
+            print("Diaz: ", diaz)
+            print()
+            print("I won this round against the Captain!")
+            diazscore += 1
+        elif diaz == "Paper" and captain == "Rock":
+            print("Captain: ", captain)
+            print("Diaz: ", diaz)
+            print()
+            print("I beat him this round!")
+            diazscore += 1
+        elif diaz == "Scissors" and captain == "Paper":
+            print("Captain: ", captain)
+            print("Diaz: ", diaz)
+            print()
+            print("The Captain lost this round!")
+            diazscore += 1
+        else:
+            print("Captain: ", captain)
+            print("Diaz: ", diaz)
+            print()
+            print("I lost!")
+            captainscore += 1
 
 
 def pitsalt():
