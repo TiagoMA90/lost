@@ -101,19 +101,61 @@ def shuttle():
     puzzle()
 
 def negotiation():
-    standup = input("")
-    standup = standup.lower()
-    if takeaction == "threaten" or standup == "threaten him" or standup == "threat" or standup == "arm the keycard":
+    captainscore = 0
+    diazscore = 0
+
+while True:
+    hands = ["Rock", "Paper", "Scissors"]
+    captain = random.choice(hands)
+    diaz = input("Which hand should I play? ").capitalize()
+    
+    if diazscore == 2:
+        print("I beat him!!!...")
+        time.sleep(3)
+        print("Does this mean...")
         time.sleep(2)
-        print("I armed the keycard! I am dead either way.")
-        time.sleep(4)
-        print("If I give up the keycard, he would take off and leave me here... nonsense...")
-        time.sleep(2)
-        print("UPDATE STORYLINE and OPTIONS HERE for pitsalt()")
+        print("I refused to accept his gun. But he let me go.")
+        time.sleep(5)
+        print("")
+        break
+    elif captainscore == 2:
+        gameover()
+        break
         
-        finaldeed()
+    if diaz == captain:
+        print("Captain: ", captain)
+        print("Diaz: ", diaz)
+        print()
+        print("I tied against the Captain, we have to go again.")
+    elif diaz == "Rock" and captain == "Scissors":
+        print("Captain: ", captain)
+        print("Diaz: ", diaz)
+        print()
+        print("I won this round against the Captain!")
+        diazscore += 1
+    elif diaz == "Paper" and captain == "Rock":
+        print("Captain: ", captain)
+        print("Diaz: ", diaz)
+        print()
+        print("I beat him this round!")
+        diazscore += 1
+    elif diaz == "Scissors" and captain == "Paper":
+        print("Captain: ", captain)
+        print("Diaz: ", diaz)
+        print()
+        print("The Captain lost this round!")
+        diazscore += 1
+    else:
+        print("Captain: ", captain)
+        print("Diaz: ", diaz)
+        print()
+        print("I lost!")
+        captainscore += 1
+
 
 def pitsalt():
+    print("I made my way to the pits.")
+    time.sleep(2)
     print("It's very wind here...")
     print(" ")
     print('"Connection lost..."')
@@ -157,8 +199,12 @@ def pitsalt():
     time.sleep(2)
     print("The egoistic bastard... he is also infected... He is as good as dead... there is no cure for what he has.")
     time.sleep(1)
-    print("What should I do? (threaten him / give up the keycard / arm the keycard)")
-    time.sleep(3)
+    print("What should I do? He sees a dilemma on his hands too...")
+    time.sleep(4)
+    print("We agreed on a stand off, of 'Rock Paper Scissors'...")
+    time.sleep(2)
+    print("Never in my life would I bet my life this way... careful not to to play around... the captain is not fooling around...")
+    time.sleep(2)
 
     negotiation()
 
@@ -245,6 +291,8 @@ def settlement():
 
 
 def pits():
+    print("I made my way to the pits...")
+    time.sleep(2)
     print("It's very wind here...")
     print(" ")
     print('"Connection lost..."')
@@ -331,7 +379,7 @@ def keycard():
 def plateau():
     print("It's a long walk, and very hot in the open. I should get back to you in a minute.")
     time.sleep(30)
-    print("Great, I am back. Good to know you waited for me. I finally reached the checkpoint.")
+    print("Great, I am back. Good to know you waited for me... I finally reached the checkpoint.")
     time.sleep(3)
     print("Do you want to hear the good news or bad news? Well, I assume both...")
     time.sleep(3)
