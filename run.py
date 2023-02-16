@@ -4,8 +4,6 @@ from datetime import timedelta
 import time
 import random
 
-logtime = datetime.now()
-
 def gameover():
         print('"Connection lost..."')
         time.sleep(2)
@@ -21,24 +19,31 @@ def gameover():
         print(" ")
         print(" ")
         print(" ")
-        print('"Retry (yes / no)"')
-        go_continue = str(input(""))
-        print(" ")
-        print(" ")
-        if go_continue == "yes" or go_continue == "y" or go_continue == "accept":
-            start()
-        elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
-            print('"Call Declined"')
+        while True:
+            print('"Retry (yes / no)"')
+            go_continue = str(input(""))
+            print(" ")
+            print(" ")
+            if go_continue == "yes" or go_continue == "y" or go_continue == "accept":
+                start()
+            elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
+                print('"Call Declined"')
 
 def coutdown():
     print("Ready for take off!")
     for countdown in range(9, 0, -1):
         print(countdown)
         time.sleep(1)
-    print(" ")
-    print(" ")
-    print(" ")
+    print()
+    print()
+    print()
     print(" THE END ")
+    print()
+    print()
+    print()
+    print()
+    print()
+    print("created and develped by Tiago Moura")
 
 
 def getaway():
@@ -216,20 +221,19 @@ def pitsalt():
     time.sleep(3)
     print("Is that the Captain?")
     time.sleep(2)
-    print("Great, he has the keycard, so... perhaps no need to bypass the ignition panels.")
     print("He looks very ill... I'll get back to you once I speak with him.")
     time.sleep(15)
     print("The Captain is out of his head...")
-    time.sleep(1)
-    print("There is only one passenger seat in that emergency shuttle... and he has the keycard")
     time.sleep(2)
-    print("He insists the shuttle is his ticket home and everyone for himself...")
-    time.sleep(5)
     print("Wait! He has a gun... and is demanding the keycard from me.")
+    time.sleep(1)
+    print("There is only one passenger seat in that emergency shuttle...")
     time.sleep(2)
+    print("He insists the shuttle is his ticket home...")
+    time.sleep(5)
     print("The egoistic bastard... he is also infected... He is as good as dead... there is no cure for what he has.")
     time.sleep(1)
-    print("What should I do? He sees a dilemma on his hands too...")
+    print("What should I do? He sees a dilemma on his hands too, and would hate to kill me for the card...")
     time.sleep(4)
     print("We agreed on a stand off, of 'Rock Paper Scissors'...")
     time.sleep(2)
@@ -240,49 +244,51 @@ def pitsalt():
 
 
 def finaldeed():
-    decisionmaker = input("")
-    decisionmaker = decisionmaker.lower()
-    if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
-        print("You better know what I am doing... I will give him my gun for the keycard...")
-        time.sleep(2)
-        print("He thanked me... seemed desperate to have it...")
-        time.sleep(3)
-        print("I don't know what he will do with that gun... There was only one bullet in that gun...")
-        time.sleep(2)
-        print("But he repeatedly said 'F + B' I fail to comprehend what he meant...")
-        time.sleep(4)
-        print("Lets get a move on. The shuttle is just ahead!")
-        time.sleep(5)
-        print(" ")
-        print('"Connection lost..."')
-        time.sleep(1)
-        print('"Reconnecting..."')
-        time.sleep(2)
-        print('"Reconnecting..."')
-        print('"Connection established"')
-        print(" ")
-        print("I just heard a gunshot behind the pits... Captain?")
-        time.sleep(2)
-        print("Oh... I see now...")
-        time.sleep(4)
-        print("The shuttle is just ahead.")
-        time.sleep(5)
+    while True:
+        print("What do you think I should do? (kill him and take the keycard / trade the gun for the key)")
+        decisionmaker = input("")
+        decisionmaker = decisionmaker.lower()
+        if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
+            print("You better know what I am doing... I will give him my gun for the keycard...")
+            time.sleep(2)
+            print("He thanked me... seemed desperate to have it...")
+            time.sleep(3)
+            print("I don't know what he will do with that gun... There was only one bullet in that gun...")
+            time.sleep(2)
+            print("But he repeatedly said 'F + B' I fail to comprehend what he meant...")
+            time.sleep(4)
+            print("Lets get a move on. The shuttle is just ahead!")
+            time.sleep(5)
+            print(" ")
+            print('"Connection lost..."')
+            time.sleep(1)
+            print('"Reconnecting..."')
+            time.sleep(2)
+            print('"Reconnecting..."')
+            print('"Connection established"')
+            print(" ")
+            print("I just heard a gunshot behind the pits... Captain?")
+            time.sleep(2)
+            print("Oh... I see now...")
+            time.sleep(4)
+            print("The shuttle is just ahead.")
+            time.sleep(5)
         
-        shuttle()
+            shuttle()
 
 
-    elif decisionmaker == "shoot" or decisionmaker == "shoot him dead" or decisionmaker == "kill" or decisionmaker == "kill him":
-        print("It's the last bullet... I better know what I am doing...")
-        print("I wonder if putting him out of his misery is the correct thing to do.")
-        time.sleep(2)
-        print("Will this make me a murderer? I guess there is no other way. Everyone for himself, right?")
-        time.sleep(7)
-        print("I killed him...")
-        time.sleep(3)
-        print("This is on both of us. My actions are a reflection of your decisions.")
-        time.sleep(5)
-        print("Let's get the keycard and never look back... The shuttle is just ahead...")
-        time.sleep(5)
+        elif decisionmaker == "shoot" or decisionmaker == "shoot him dead" or decisionmaker == "kill" or decisionmaker == "kill him":
+            print("It's the last bullet... I better know what I am doing...")
+            print("I wonder if putting him out of his misery is the correct thing to do.")
+            time.sleep(2)
+            print("Will this make me a murderer? I guess there is no other way. Everyone for himself, right?")
+            time.sleep(7)
+            print("I killed him...")
+            time.sleep(3)
+            print("This is on both of us. My actions are a reflection of your decisions.")
+            time.sleep(5)
+            print("Let's get the keycard and never look back... The shuttle is just ahead...")
+            time.sleep(5)
         
         shuttle()
 
@@ -301,7 +307,6 @@ def settlement():
         print("I could just kill him and take the keycard for myself, but... I am not a murderer...")
         print("You are my guide here...")
         time.sleep(1)
-        print("What do you think I should do? (kill him and take the keycard / trade the gun for the key)")
         
         finaldeed()
 
@@ -404,8 +409,9 @@ def keycard():
         print("The view is rather spectacular, but very hot up here, No wonder there is no nightime in this planet...")
         time.sleep(2)
         print("I can see the pits from up here. I'll get back to you once I get more updates.")
+        time.sleep(6)
         
-        pits()
+        pitsalt()
 
 
 def plateau():
@@ -436,13 +442,13 @@ def plateau():
     print("----------------------------------------------------------------------------------------------------")
     print("DOWNLOADING DATA...")
     print("----------------------------------------------------------------------------------------------------")
-    print(datetime.now() + timedelta(days=-2, hours=-10))
+    print(datetime.now() + timedelta(days=101773, hours=-10))
     print("'Be careful, something sinister dwells in this ecosystem.'")
     print("'If you see it run and don't look back. Davies and I managed to escape, but we have been infected...")
     print("'I also retrieved the keycard from the scrapyard, there is also some food left...'")
-    print("'If you want to open it the kit, containing the keycard, it should be the 6th constellation sign of the Zodiac, planet Earth.'")
+    print("'If you want to open the kit, containing the keycard, it should be the 6th constellation sign of the Zodiac, planet Earth.'")
     print("'Careful not to mistype it else it will selfdestruct, with you included. The blast can be fatal.")
-    print("'I had to arm it, because of Van Beek... You have two tries, before it explodes.'")
+    print("'I had to arm it, because of Van Beek, me and Davies made a detour from him... You have two tries, before it explodes.'")
     print("'The stars, so bright... I think I will lie down here for a while...'")
     print("- Martin Laurent")
     print("----------------------------------------------------------------------------------------------------")
@@ -587,7 +593,7 @@ def cave():
     print("----------------------------------------------------------------------------------------------------")
     print("DOWNLOADING DATA...")
     print("----------------------------------------------------------------------------------------------------")
-    print(datetime.now() + timedelta(days=-5, hours=-5))
+    print(datetime.now() + timedelta(days=101770, hours=-5))
     print("'Christ... This Fujin guy, is flipping out... He insists the only gun onboard belongs to him and to himself only... while my life gets to depend on him.'")
     print("'Who put him in charge? He doesn't let anyone near it... The selfish bastard... When he least expects, I will grab it.'")
     print("'He thinks he has everything covered... I saw him changing the password for the holster, it is the anthropolists first name...'")
@@ -682,12 +688,14 @@ def pact():
     print("We haven't found any life forms around... this should be more than enough to conclude that Planet-9 is dead.")
     time.sleep(3)
     print("Looks like I arrived at my checkpoint...")
-    print("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
-    pathway = input("")
-    pathway = pathway.lower()
-    if pathway == "plateau" or pathway == "p" or pathway == "take the plateau" or pathway == "go to the plateau" or pathway == "go through the plateau":
+
+    while True:
+        print("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
+        pathway = input("")
+        pathway = pathway.lower()
+        if pathway == "plateau" or pathway == "p" or pathway == "take the plateau" or pathway == "go to the plateau" or pathway == "go through the plateau":
             plateau()
-    elif pathway == "cave" or pathway == "c" or pathway == "take the cave" or pathway == "go inside the cave" or pathway == "go through the cave":
+        elif pathway == "cave" or pathway == "c" or pathway == "take the cave" or pathway == "go inside the cave" or pathway == "go through the cave":
             cave()
             
 
@@ -730,24 +738,26 @@ def start():
     print('"Reconnecting..."')
     time.sleep(9)
     print('"Connection established"')
-    print(logtime)
+    print(datetime.now() + timedelta(days=101775, hours=-5))
     print()
-    print("Are you still here? The connection is weak here... It is imperative that you help me!")
+    print(name + " are you still there? The connection is weak here... It is imperative that you help me!")
     time.sleep(2)
     print("I need to get out of here. That is why they sent you right?")
     time.sleep(1)
-    print("Can you stay online and help me? (yes / no)")
-    response = input("")
-    response = response.lower()
-    if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you":
+
+    while True:
+        print("Can you stay online and help me? (yes / no)")
+        response = input("")
+        response = response.lower()
+        if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you":
             pact()
-    elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
+        elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
             print('"Call suspended"')
             
             
 print("............................................................................................")
 time.sleep(2)
-print(datetime.now() + timedelta(days=5, hours=-5))
+print(datetime.now() + timedelta(days=101775, hours=-5))
 print("Final report of Research Starship 'GAMMA'.")
 time.sleep(2)
 print("The other members of the Crew... are dead, the Captain is missing, the cargo and ship wrecked.")
@@ -777,7 +787,7 @@ print('"Incoming signal..."')
 print('"Connecting..."')
 time.sleep(0.3)
 print("Connection established")
-print(logtime)
+print(datetime.now() + timedelta(days=101775, hours=-5))
 print("EPSILON Station-P3, Mars")
 print()
 time.sleep(2)
@@ -786,11 +796,12 @@ time.sleep(1)
 print("Hello?! Anybody there?")
 print("")
 
-print("Accept transmission? (accept / decline)") 
-startgame = input("")
-startgame = startgame.lower()
-if startgame == "yes" or startgame == "y" or startgame == "accept":
-    start()
-elif startgame == "no" or startgame == "n" or startgame == "decline":
-    print("Call Declined")
-    gameover()
+while True:
+    print("Accept transmission? (accept / decline)") 
+    startgame = input("")
+    startgame = startgame.lower()
+    if startgame == "yes" or startgame == "y" or startgame == "accept":
+        start()
+    elif startgame == "no" or startgame == "n" or startgame == "decline":
+        print("Call Declined")
+        gameover()
