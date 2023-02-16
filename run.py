@@ -142,6 +142,7 @@ def negotiation():
     while True:
         hands = ["Rock", "Paper", "Scissors"]
         captain = random.choice(hands)
+        print()
         diaz = input("Which hand should I play? ").capitalize()
         
         if diazscore == 2:
@@ -149,9 +150,16 @@ def negotiation():
             time.sleep(3)
             print("Does this mean...")
             time.sleep(2)
-            print("I refused to accept his gun. But he let me go.")
+            print("I refused to accept his gun. He kept his word and let me go.")
             time.sleep(5)
-            print("")
+            print("I am going to the shuttle.")
+            time.sleep("I'll get back to you in a moment shortly.")
+            time.sleep(5)
+            print(name + "Diy you hear that? I just heard a gunshot...")
+            time.sleep(2)
+            print("I suppose he took matters with his own hands.")
+            time.sleep(4)
+            shuttle()
             break
         elif captainscore == 2:
             gameover()
@@ -237,7 +245,7 @@ def pitsalt():
     time.sleep(4)
     print("We agreed on a stand off, of 'Rock Paper Scissors'...")
     time.sleep(2)
-    print("Never in my life would I bet my life this way... careful not to to play around... the captain is not fooling around...")
+    print("Never in my life would I bet my life this way... careful not to to play around... the captain is not fooling...")
     time.sleep(2)
 
     negotiation()
@@ -398,7 +406,7 @@ def keycard():
     if outofguess:
         gameover()
     else:
-        print("The keycard has been been disarmed")
+        print('"The keycard has been been disarmed"')
         print("")
         print("This should ignite the shuttle.")
         time.sleep(2)
@@ -429,7 +437,7 @@ def plateau():
     time.sleep(4)
     print("They died of something extraordinary... like a sickness or some sort...")
     time.sleep(2)
-    print("Their faces... horrific.")
+    print("Hirrific...")
     time.sleep(5)
     print("Anyway...")
     time.sleep(3)
