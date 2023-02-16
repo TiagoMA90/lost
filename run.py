@@ -29,7 +29,7 @@ def gameover():
             elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
                 print('"Call Declined"')
 
-def coutdown():
+def countdown():
     print("Ready for take off!")
     for countdown in range(9, 0, -1):
         print(countdown)
@@ -111,7 +111,7 @@ def puzzle():
             if attempts <= 0:
                 gameover()
             if correct == 6:
-                print('"Access granted to system"')
+                print('"Access granted. Systems online"')
                 time.sleep(2)
                 print("Bingo!, you unlocked it! Wait a second... ")
 
@@ -119,7 +119,9 @@ def puzzle():
 
 
 def shuttle():
-    print("Here I am, I found the Emergency shuttle.")
+    print("Here I am, I found the Emergency shuttle. Ernst made it here, before he went back to base.")
+    time.sleep(1)
+    print("I imagine he didn't have the card with him.")
     time.sleep(2)
     print("The power cells are in place.")
     time.sleep(1)
@@ -129,9 +131,7 @@ def shuttle():
     time.sleep(2)
     print("A log in is requiered to access the systems...")
     time.sleep(2)
-    print("Don't mess this up, else the system will be locked. We don't have an engineer to unlock it.")
-    time.sleep(2)
-    print("This is my only way out of here! Any clue?")
+    print("This is my only way out of here! Any clues, ?")
 
     puzzle()
 
@@ -156,7 +156,7 @@ def negotiation():
             time.sleep(2)
             print("I'll get back to you in a moment shortly.")
             time.sleep(5)
-            print(name + "Diy you hear that? I just heard a gunshot...")
+            print("Did you hear that? I just heard a gunshot...")
             time.sleep(2)
             print("I suppose he took matters with his own hands.")
             time.sleep(4)
@@ -211,8 +211,6 @@ def pitsalt():
     print(" ")
     time.sleep(4)
     print("It should take a while to find a safe zone...")
-    time.sleep(5)
-    print("Hang on...")
     time.sleep(3)
     print("There is something moving in the distance... someone...")
     print(" ")
@@ -230,7 +228,7 @@ def pitsalt():
     time.sleep(3)
     print("Is that the Captain?")
     time.sleep(2)
-    print("He looks very ill... I'll get back to you once I speak with him.")
+    print("He looks very ill... I should go up to him at once.")
     time.sleep(15)
     print("The Captain is out of his head...")
     time.sleep(2)
