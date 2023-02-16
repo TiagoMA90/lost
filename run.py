@@ -4,6 +4,19 @@ from datetime import timedelta
 import time
 import random
 
+def credits():
+    print()
+    print()
+    print()
+    print()
+    print("THE END")
+    print()
+    print("created by Tiago Moura")
+    print()
+    print()
+    gameover()
+
+
 def gameover():
         print('"Connection lost..."')
         time.sleep(2)
@@ -30,13 +43,17 @@ def gameover():
                 print('"Call Declined"')
 
 def countdown():
+    print("You got it!")
+    time.sleep(3)
     print("This is it, departure.")
     time.sleep(5)
-    print("Ready for take off!")
+    print("I am ready for take off!")
+    print()
     for countdown in range(9, 0, -1):
         time.sleep(1)
         print(countdown)
-    print("The END")
+    print()
+    credits()
 
 
 def getaway():
@@ -50,6 +67,7 @@ def getaway():
         
     def playgame():
         display_board()
+        print()
         position = input("Input the position ")
         position = int(position)
         board[position] = "X"
@@ -72,8 +90,8 @@ def takeoff():
     time.sleep(4)
     print("We should have two tries... before  permanent system shutdown.")
     time.sleep(2)
-    print("have you seen anything like it? Which one is the execution number?")
-
+    print("Have you seen anything like it? Which one is the execution number?")
+    print()
     getaway()
 
 
@@ -193,9 +211,10 @@ def negotiation():
 
 
 def pitsalt():
+    time.sleep(4)
     print("I made my way to the pits.")
     time.sleep(2)
-    print("It's very wind here...")
+    print("It's very windy here...")
     print(" ")
     print('"Connection lost..."')
     time.sleep(1)
@@ -327,9 +346,13 @@ def settlement():
         time.sleep(3)
         print("This is on both of us. My actions are a reflection of your decisions.")
         time.sleep(5)
-        print("Let's get the keycard and never look back.")
+        print("Let's get the keycard and never look back... he has something written on his hand.")
         time.sleep(2)
-        
+        print('It says "F + B"')
+        time.sleep(2)
+        print("I should keep going... The shuttle is just ahead...")
+        time.sleep(4)
+
         shuttle()
 
 
@@ -367,11 +390,11 @@ def pits():
     print("Is that the Captain?")
     time.sleep(2)
     print("Great, he has the keycard, so... perhaps no need to bypass the ignition panels.")
-    print("He looks very ill... I'll get back to you once I speak with him")
+    print("He looks very ill... I'll get back to you once I speak with him.")
     time.sleep(15)
     print("The Captain is out of his head...")
     time.sleep(1)
-    print("There is only one passenger seat in that emergency shuttle... and he carries the card")
+    print("There is only one passenger seat in that emergency shuttle... and he carries the card.")
     time.sleep(2)
     print("He insists the shuttle is his ticket home and everyone for himself...")
     time.sleep(5)
