@@ -3,6 +3,8 @@ from datetime import datetime
 from datetime import timedelta
 import time
 import random
+from colorama import Fore
+
 
 def credits():
     print()
@@ -785,7 +787,7 @@ def start():
             print('"Call suspended"')
             
             
-print("............................................................................................")
+print(Fore.BLUE + "............................................................................................")
 time.sleep(2)
 print(datetime.now() + timedelta(days=101775, hours=-5))
 print("Final report of Research Starship 'GAMMA'.")
