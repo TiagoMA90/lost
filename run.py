@@ -6,6 +6,7 @@ import time
 import random
 import sys
 
+# ----------------------typewriter function-----------------------
 def diaz(text):
     for letters in text:
         sys.stdout.write(letters)
@@ -13,7 +14,7 @@ def diaz(text):
         time.sleep(.05)
     print("")
 
-
+# ----------------------------Credits-----------------------------
 def credits():
     print()
     print()
@@ -26,7 +27,7 @@ def credits():
     print()
     gameover()
 
-
+# ---------------------------GAME OVER----------------------------
 def gameover():
         print('"Connection lost..."')
         time.sleep(2)
@@ -52,6 +53,7 @@ def gameover():
             elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
                 print('"Call Declined"')
 
+# ---------------------------COUNTDOWN(Act16)----------------------------
 def countdown():
     diaz("You got it!")
     time.sleep(3)
@@ -65,7 +67,7 @@ def countdown():
     print()
     credits()
 
-
+# ----------------------------Ignition(Act15)----------------------------
 def getaway():
     board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
@@ -77,9 +79,13 @@ def getaway():
         
     def playgame():
         display_board()
-        print()
+        handleposition()
+
+    def handleposition():
         position = input("Input the position ")
         position = int(position)
+        board[position] = "X"
+        display_board()
         board[position] = "X"
         
         if position == 7:
@@ -88,6 +94,8 @@ def getaway():
             gameover()
     
     playgame()
+    
+# --------------------------Take Off(Act14)------------------------------------
 
 def takeoff():
     diaz("Great! So far, so good.")
@@ -104,7 +112,7 @@ def takeoff():
     print()
     getaway()
 
-
+# -----------------------------Puzzle(Act13)---------------------------------
 def puzzle():
     login = ("python")
     password = login
@@ -113,10 +121,7 @@ def puzzle():
     attempts = 3
     correct = 0
 
-    print("*"*len(password))
-
     while True:
-        print("Input characters:")
         characters = str(input("Characater: "))
         entry.append(characters)
     
@@ -138,7 +143,7 @@ def puzzle():
 
                 takeoff()
 
-
+# --------------------------Shuttle(Act12)------------------------------
 def shuttle():
     diaz("Here I am, I found the Emergency shuttle. Ernst made it here, before he went back to base. I can see his workers tag.")
     time.sleep(1)
@@ -156,6 +161,7 @@ def shuttle():
 
     puzzle()
 
+# --------------------------Rock Paper Scissors(Act11)-------------------------
 def negotiation():
     captainscore = 0
     diazscore = 0
@@ -220,6 +226,7 @@ def negotiation():
             captainscore += 1
 
 
+# --------------------------Pits(Act7alt)------------------------------
 def pitsalt():
     time.sleep(4)
     diaz("I made my way to the pits.")
@@ -273,7 +280,7 @@ def pitsalt():
 
     negotiation()
 
-
+# --------------------------Leap(Act10)------------------------------
 def finaldeed():
     while True:
         diaz("What do you think I should do? (kill him and take the keycard / trade the gun for the key)")
@@ -328,6 +335,7 @@ def finaldeed():
         
         shuttle()
 
+# --------------------------Judgement(Act9)------------------------------
 def settlement():
     takeaction = input("")
     takeaction = takeaction.lower()
@@ -347,7 +355,7 @@ def settlement():
         
         finaldeed()
 
-
+# --------------------------Killer(Act8)------------------------------
     elif takeaction == "shoot" or takeaction == "shoot him dead" or takeaction == "kill" or takeaction == "kill him":
         diaz("It's the last bullet... I better know what I am doing...")
         diaz("I wonder if putting him out of his misery is the correct thing to do.")
@@ -367,7 +375,7 @@ def settlement():
 
         shuttle()
 
-
+# --------------------------Pits(Act7)------------------------------
 def pits():
     diaz("I made my way to the pits...")
     time.sleep(2)
@@ -421,7 +429,7 @@ def pits():
     settlement()
 
 
-
+# --------------------------Keycard(Act5b)------------------------------
 def keycard():
     password = "virgo"
     guess = ""
@@ -455,7 +463,7 @@ def keycard():
         
         pitsalt()
 
-
+# --------------------------Plateau(Act4b)------------------------------
 def plateau():
     diaz("It's a long walk, and very hot in the open. I should get back to you in a minute.")
     time.sleep(30)
@@ -498,7 +506,7 @@ def plateau():
     
     keycard()
 
-
+# --------------------------Gun(Act7a)------------------------------
 def risk():
     outcome = ["hit", "miss"]
     shot = random.choice(outcome)
@@ -528,7 +536,7 @@ def risk():
         gameover()
 
 
-
+# --------------------------Encounter(Act6a)------------------------------
 def fightorflee():
     caveencounter = input("")
     caveencounter = caveencounter.lower()
@@ -562,6 +570,7 @@ def fightorflee():
 
         risk()
 
+# --------------------------GunHolster(Act5a)------------------------------
 def gunholster():
     password = "emma"
     guess = ""
@@ -595,7 +604,7 @@ def gunholster():
         diaz("Should I run, move quietly towards the exit or shoot my way through? (run / sneak / shoot)")
         fightorflee()
 
-
+# --------------------------Cave(Act4a)------------------------------
 def cave():
     diaz("Very well then... I shall enter the depths of this cave.")
     time.sleep(5)
@@ -658,7 +667,7 @@ def cave():
     gunholster()
 
 
-
+# --------------------------DATA(Act3))------------------------------
 def pact():
     time.sleep(2)
     diaz("Great. Very well. I need you to help me navigate to the Emergency Shuttle.")
@@ -741,6 +750,7 @@ def pact():
     time.sleep(3)
     diaz("Looks like I arrived at my checkpoint...")
 
+# --------------------------Choose a Path------------------------------
     while True:
         diaz("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
         pathway = input("")
@@ -751,6 +761,7 @@ def pact():
             cave()
             
 
+# --------------------------Accept(Act2)------------------------------
 def start():
     print('"Transmission accepted"')
     print("")
@@ -809,7 +820,8 @@ def start():
         elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
             print('"Call suspended"')
             
-           
+
+# --------------------------Intro(Act1)------------------------------
 print(Fore.BLUE + "............................................................................................")
 time.sleep(2)
 print(datetime.now() + timedelta(days=101775, hours=-5))
@@ -851,6 +863,7 @@ time.sleep(1)
 diaz("Hello?! Anybody there?")
 print("")
 
+# --------------------------Play or Close the game------------------------------
 while True:
     print("Accept transmission? (accept / decline)") 
     startgame = input("")
