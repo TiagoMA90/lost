@@ -30,20 +30,13 @@ def gameover():
                 print('"Call Declined"')
 
 def countdown():
+    print("This is it, departure.")
+    time.sleep(5)
     print("Ready for take off!")
     for countdown in range(9, 0, -1):
-        print(countdown)
         time.sleep(1)
-        print()
-        print()
-        print()
-        print(" THE END ")
-        print()
-        print()
-        print()
-        print()
-        print()
-        print("created and develped by Tiago Moura")
+        print(countdown)
+    print("The END")
 
 
 def getaway():
@@ -507,6 +500,7 @@ def fightorflee():
         print("It's after me!")
         time.sleep(2)
         print("I made it... I made it to the exit!")
+        time.sleep(3)
         print("I can see the pits from down here. I'll contact you once I get to my next checkpoint.")
 
         pits()
