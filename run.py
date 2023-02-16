@@ -152,7 +152,7 @@ def shuttle():
     time.sleep(2)
     diaz("A log in is requiered to access the systems, the characters should be introduced one by one...")
     time.sleep(2)
-    diaz("Any clues?")
+    diaz("Ernst must have locked it before he double tagged. Any clues?")
 
     puzzle()
 
@@ -540,6 +540,7 @@ def fightorflee():
         diaz("I made it... I made it to the exit!")
         time.sleep(3)
         diaz("I can see the pits from down here. I'll contact you once I get to my next checkpoint.")
+        time.sleep(3)
 
         pits()
 
@@ -775,6 +776,8 @@ def start():
     diaz("'The path to your salvation lies in this riddle:")
     diaz("I am not a snake... I am not a comedy group... I am an ancient programing language used by earthlings. What am I?'")
     print()
+    time.sleep(2)
+    diaz("Whatever that means...")
     time.sleep(3)
     diaz("Anyway... The rest of team disapeared...")
     time.sleep(2)
