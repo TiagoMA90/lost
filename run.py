@@ -22,11 +22,12 @@ def gameover():
         print(" ")
         print(" ")
         print('"Retry (yes / no)"')
+        go_continue = str(input(""))
         print(" ")
         print(" ")
-        if gameover == "yes" or startgame == "y" or startgame == "accept":
+        if go_continue == "yes" or go_continue == "y" or go_continue == "accept":
             start()
-        elif startgame == "no" or startgame == "n" or startgame == "decline":
+        elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
             print('"Call Declined"')
 
 def coutdown():
@@ -79,11 +80,11 @@ def takeoff():
 
 
 def puzzle():
-    login = ("magellan")
+    login = ("python")
     password = login
-    underline = ["*", "*", "*", "*", "*", "*", "*", "*"]
+    underline = ["*", "*", "*", "*", "*", "*"]
     entry = []
-    attempts = 5
+    attempts = 3
     correct = 0
 
     print("*"*len(password))
@@ -93,7 +94,7 @@ def puzzle():
         characters = str(input("Characater: "))
         entry.append(characters)
     
-        if password == "magellan":
+        if password == "python":
             if characters in password:
                 underline[password.index(characters)] = (characters)
                 print(underline)
@@ -104,7 +105,7 @@ def puzzle():
                 print("Remaining tries {}". format(attempts))
             if attempts <= 0:
                 gameover()
-            if correct == 7:
+            if correct == 6:
                 print('"Access granted to system"')
                 time.sleep(2)
                 print("Bingo!, you unlocked it! Wait a second... ")
@@ -124,7 +125,8 @@ def shuttle():
     print("A log in is requiered to access the systems...")
     time.sleep(2)
     print("Don't mess this up, else the system will be locked. We don't have an engineer to unlock it.")
-    print("GIVE A CLUE TO THE PASSWORD PUZZLE HERE")
+    time.sleep(2)
+    print("This is my only way out of here! Any clue?")
 
     puzzle()
 
@@ -215,7 +217,7 @@ def pitsalt():
     print("Is that the Captain?")
     time.sleep(2)
     print("Great, he has the keycard, so... perhaps no need to bypass the ignition panels.")
-    print("He looks very ill... I'll get back to you once I speak with him")
+    print("He looks very ill... I'll get back to you once I speak with him.")
     time.sleep(15)
     print("The Captain is out of his head...")
     time.sleep(1)
@@ -243,10 +245,12 @@ def finaldeed():
     if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
         print("You better know what I am doing... I will give him my gun for the keycard...")
         time.sleep(2)
-        print("He thanked me... He seemed desperate to have it...")
+        print("He thanked me... seemed desperate to have it...")
         time.sleep(3)
         print("I don't know what he will do with that gun... There was only one bullet in that gun...")
         time.sleep(2)
+        print("But he repeatedly said 'F + B' I fail to comprehend what he meant...")
+        time.sleep(4)
         print("Lets get a move on. The shuttle is just ahead!")
         time.sleep(5)
         print(" ")
@@ -705,8 +709,17 @@ def start():
     print("An SOS pick up vessel was supposed to dock a few days and pick us up... Except, it never landed...")
     print("There was another incident last week, I dont know what happened...")
     time.sleep(3)
-    print("I woke up dizzy in my pod, Ernst was found dead by the dinner table with a hand written note on his hand 'F + B = ?'. The rest of team disapeared...")
+    print("I woke up dizzy in my pod, Ernst was found dead by the dinner table with a hand written note on his hand.")
+    time.sleep(3)
+    print()
+    print("'The path to your salvation lies in this riddle:")
+    print("I am not a snake... I am not a comedy group... I am an ancient programing language used by earthlings. What am I?'")
+    print()
+    time.sleep(3)
+    print("Anyway... The rest of team disapeared...")
+    time.sleep(2)
     print("It was him who closed our Pods, before the start of his shift.")
+    time.sleep(1)
     print("Crew status indicates they are dead, with the exception of the Captain...")
     time.sleep(1)
     print("Our internal hardware is damaged and I cannot salvage anything from our station...")
@@ -780,3 +793,4 @@ if startgame == "yes" or startgame == "y" or startgame == "accept":
     start()
 elif startgame == "no" or startgame == "n" or startgame == "decline":
     print("Call Declined")
+    gameover()
