@@ -669,7 +669,7 @@ def cave():
 
 # --------------------------DATA(Act3))------------------------------
 def pact():
-
+    
     class Worker:
         def __init__(self,name,age,planet,duty,status):
             self.name = name
@@ -684,7 +684,7 @@ def pact():
     worker_4 = Worker("Laurent, Martin", 44, "Earth, FR", "Photo/Videographer", "Dead")
     worker_5 = Worker("Diaz, Juan", 29, "Earth, ES", "Documenter", "Alive")
     worker_6 = Worker("Salazar, Pedro", 45, "Earth, PT", "Captain", "Alive")
-    worker_7 = Worker("van Beek, Johannes", 45, "Earth, BE", "Lead Research", "Dead")
+    worker_7 = Worker("van Beek, Johannes", 36, "Earth, BE", "Lead Research", "Dead")
 
     time.sleep(2)
     diaz("Great. Very well. I need you to help me navigate to the Emergency Shuttle.")
@@ -715,7 +715,7 @@ def pact():
     print("Duty:", worker_2.duty)
     print("Status:", worker_2.status)
     print("............................")
-    time.sleep(1)
+    time.sleep(2)
     print("Name:", worker_3.name)
     print("Age:", worker_3.age)
     print("Planet:", worker_3.planet)
@@ -750,7 +750,7 @@ def pact():
     print("Duty:", worker_7.duty)
     print("Status:", worker_7.status)
     print("............................")
-    time.sleep(1)
+    time.sleep(2)
     print("DOWNLOAD COMPLETE")
     print("............................")
     print()
