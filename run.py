@@ -199,30 +199,30 @@ def negotiation():
             print("Captain: ", captain)
             print("Diaz: ", diaz)
             print()
-            diaz("I tied against the Captain, we have to go again.")
+            print("I tied against the Captain, we have to go again.")
         elif diaz == "Rock" and captain == "Scissors":
             print("Captain: ", captain)
             print("Diaz: ", diaz)
             print()
-            diaz("I won this round against the Captain!")
+            print("I won this round against the Captain!")
             diazscore += 1
         elif diaz == "Paper" and captain == "Rock":
             print("Captain: ", captain)
             print("Diaz: ", diaz)
             print()
-            diaz("I beat him this round!")
+            print("I beat him this round!")
             diazscore += 1
         elif diaz == "Scissors" and captain == "Paper":
             print("Captain: ", captain)
             print("Diaz: ", diaz)
             print()
-            diaz("The Captain lost this round!")
+            print("The Captain lost this round!")
             diazscore += 1
         else:
             print("Captain: ", captain)
             print("Diaz: ", diaz)
             print()
-            diaz("I lost!")
+            print("I lost!")
             captainscore += 1
 
 
