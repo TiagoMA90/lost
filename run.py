@@ -11,7 +11,7 @@ def diaz(text):
     for letters in text:
         sys.stdout.write(letters)
         sys.stdout.flush()
-        time.sleep(.05)
+        time.sleep(.01)
     print("")
 
 # ----------------------------Credits-----------------------------
@@ -20,34 +20,52 @@ def credits():
     print()
     print()
     print()
-    print("THE END")
+    print("         THE END")
     print()
-    print("created by Tiago Moura")
+    print()
+    print()
+    print("LOST created by Tiago Moura, 2023")
+    time.sleep(10)
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
     print()
     print()
     gameover()
 
 # ---------------------------GAME OVER----------------------------
 def gameover():
+        print()
         print('"Connection lost..."')
         time.sleep(2)
         print('"Reconnecting..."')
         print('"Failed to connect"')
         time.sleep(3)
-        print(" ")
-        print("")
-        print(" ")
-        print(" ")
-        print(" ")
+        print()
+        print()
+        print()
+        print()
         print("GAME OVER")
-        print(" ")
-        print(" ")
-        print(" ")
+        print()
+        print()
+        print()
+        print()
         while True:
             print('"Retry (yes / no)"')
             go_continue = str(input(""))
-            print(" ")
-            print(" ")
+            print()
+            print()
             if go_continue == "yes" or go_continue == "y" or go_continue == "accept":
                 start()
             elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
@@ -55,6 +73,7 @@ def gameover():
 
 # ---------------------------COUNTDOWN(Act16)----------------------------
 def countdown():
+    print()
     diaz("You got it!")
     time.sleep(3)
     diaz("This is it, departure.")
@@ -82,7 +101,7 @@ def getaway():
         handleposition()
 
     def handleposition():
-        position = input("Input the position ")
+        position = input('"Pressed number "')
         position = int(position)
         board[position] = "X"
         display_board()
@@ -106,7 +125,7 @@ def takeoff():
     time.sleep(3)
     diaz("Hang on a second, I am uploading the data to you...")
     time.sleep(4)
-    diaz("We should have two tries... before permanent system shutdown.")
+    diaz("We should have only one try... before permanent system shutdown. Don't mess this up.")
     time.sleep(2)
     diaz("Have you seen anything like it? Which one is the execution number?")
     print()
@@ -122,7 +141,7 @@ def puzzle():
     correct = 0
 
     while True:
-        characters = str(input("Characater: "))
+        characters = str(input("Character: "))
         entry.append(characters)
     
         if password == "python":
@@ -548,7 +567,7 @@ def fightorflee():
         diaz("I made it... I made it to the exit!")
         time.sleep(3)
         diaz("I can see the pits from down here. I'll contact you once I get to my next checkpoint.")
-        time.sleep(3)
+        time.sleep(10)
 
         pits()
 
@@ -567,6 +586,7 @@ def fightorflee():
         diaz("This is a shot in the dark. If I miss, I am dead...")
         time.sleep(5)
         diaz("Steady...")
+        time.sleep(5)
 
         risk()
 
@@ -599,7 +619,7 @@ def gunholster():
         time.sleep(4)
         diaz("I can no longer hear or feel the droplets of water falling down from the ceiling...")
         time.sleep(5)
-        diaz("The issing is gone...")
+        diaz("The hissing is gone...")
         time.sleep(1)
         diaz("Should I run, move quietly towards the exit or shoot my way through? (run / sneak / shoot)")
         fightorflee()
@@ -662,7 +682,9 @@ def cave():
     print("DOWNLOADING COMPLETE...")
     print("----------------------------------------------------------------------------------------------------")
     time.sleep(3)
+    print()
     diaz("I should have a few tries before I attract unwanted attention.")
+    print()
 
     gunholster()
 
@@ -690,7 +712,7 @@ def pact():
     diaz("Great. Very well. I need you to help me navigate to the Emergency Shuttle.")
     time.sleep(1)
     diaz("It detached 24km southwest from here, should take a few hours from where I stand.")
-    diaz("My GPS is damaged..., but you should be able to guide me through this ecosystem.")
+    diaz("My GPS is damaged... but you should be able to guide me through this ecosystem.")
     time.sleep(1)
     diaz("I am walking towards my next destination...")
     time.sleep(2)
@@ -799,7 +821,7 @@ def start():
     time.sleep(1)
     diaz("There was another incident last week, I dont know what happened...")
     time.sleep(3)
-    diaz("I woke up dizzy in my pod, Ernst was found dead by the dinner table with a hand written note on his hand.")
+    diaz("I woke up dizzy in my pod, Ernst was found dead by the dinner table with a hand written note on his hands.")
     time.sleep(3)
     print()
     diaz("'The path to your salvation lies in this riddle:")
