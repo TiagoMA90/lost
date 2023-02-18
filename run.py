@@ -106,7 +106,7 @@ def takeoff():
     time.sleep(3)
     diaz("Hang on a second, I am uploading the data to you...")
     time.sleep(4)
-    diaz("We should have two tries... before  permanent system shutdown.")
+    diaz("We should have two tries... before permanent system shutdown.")
     time.sleep(2)
     diaz("Have you seen anything like it? Which one is the execution number?")
     print()
@@ -173,21 +173,21 @@ def negotiation():
         diaz = input("Which hand should I play? ").capitalize()
         
         if diazscore == 2:
-            diaz("I beat him, fair and square!!!...")
+            print("I beat him, fair and square!!!...")
             time.sleep(3)
-            diaz("Does this mean...")
+            print("Does this mean...")
             time.sleep(2)
-            diaz("I refused to accept his gun... He kept his word and let me go.")
+            print("I refused to accept his gun... He kept his word and let me go.")
             time.sleep(5)
-            diaz("He also said, 'F + B' should launch the shuttle.")
+            print("He also said, 'F + B' should launch the shuttle.")
             time.sleep(2)
-            diaz("I am going to the shuttle.")
+            print("I am going to the shuttle.")
             time.sleep(2)
-            diaz("I'll get back to you in a moment shortly.")
+            print("I'll get back to you in a moment shortly.")
             time.sleep(5)
-            diaz("Did you hear that? I just heard a gunshot...")
+            print("Did you hear that? I just heard a gunshot...")
             time.sleep(2)
-            diaz("I suppose he took matters with his own hands.")
+            print("I suppose he took matters with his own hands.")
             time.sleep(4)
             shuttle()
             break
@@ -837,6 +837,7 @@ def start():
             pact()
         elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
             print('"Call suspended"')
+            gameover()
             
 
 # --------------------------Intro(Act1)------------------------------
