@@ -101,7 +101,7 @@ def getaway():
         handleposition()
 
     def handleposition():
-        position = int(input('"Pressed number "'))
+        position = int(input("I pressed pressed number "))
         position = int(position)
         board[position] = "X"
         display_board()
@@ -133,34 +133,40 @@ def takeoff():
 
 # -----------------------------Puzzle(Act13)---------------------------------
 def puzzle():
-    login = ("python")
-    password = login
-    underline = ["*", "*", "*", "*", "*", "*"]
-    entry = []
-    attempts = 3
-    correct = 0
-
-    while True:
-        characters = str(input("Character: "))
-        entry.append(characters)
+    password = "python"
+    attempts = 0
+    chances = 3
+    log = ["*"]*len(password)
     
-        if password == "python":
-            if characters in password:
-                underline[password.index(characters)] = (characters)
-                print(underline)
-                correct += 1
-            else:
-                diaz("This is the incorrect character!")
-                attempts -= 1
-                diaz("Remaining tries {}". format(attempts))
-            if attempts <= 0:
-                gameover()
-            if correct == 6:
-                diaz('"Access granted. Systems online"')
-                time.sleep(2)
-                diaz("Bingo!, you unlocked it! Wait a second... ")
+    print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
+    print(str(log).replace(',', ''))
+    print("-------------------------")
+    
+    while attempts < chances and "".join(log) != password:
+        character = input("Input a character: ")
+        if character in password:
+            for i in range(len(password)):
+                if character == password[i]:
+                    log[i] = character
+                else:
+                    print()
+                    attempts += 1
+                
+                print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
+                print(str(log).replace(',', ''))
+                print("-------------------------")
+                
+    if attempts == chances:
+        print()
+        print('"Access denied"')
 
-                takeoff()
+        gameover()
+    else:
+        print('"Access granted. Systems online"')
+        time.sleep(2)
+        diaz("Bingo!, you unlocked it! Wait a second... ")
+        
+        takeoff()
 
 # --------------------------Shuttle(Act12)------------------------------
 def shuttle():
@@ -385,7 +391,7 @@ def settlement():
         time.sleep(3)
         diaz("This is on both of us. My actions are a reflection of your decisions.")
         time.sleep(5)
-        diaz("Let's get the keycard and never look back... he has something written on his hand.")
+        diaz("Let's get the keycard and never look back... he has something written on his forearm..")
         time.sleep(2)
         diaz('It says "F + B"')
         time.sleep(2)
