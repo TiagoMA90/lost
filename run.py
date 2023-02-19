@@ -149,13 +149,13 @@ def puzzle():
             for i in range(len(password)):
                 if character == password[i]:
                     log[i] = character
-                else:
-                    print()
-                    attempts += 1
+        else:
+            print()
+            attempts += 1
                 
-                print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
-                print(str(log).replace(',', ''))
-                print("-------------------------")
+            print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
+            print(str(log).replace(',', ''))
+            print("-------------------------")
                 
     if attempts == chances:
         print()
