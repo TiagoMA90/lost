@@ -46,30 +46,31 @@ def credits():
 
 # ---------------------------GAME OVER----------------------------
 def gameover():
+    print()
+    print('"Connection lost..."')
+    time.sleep(2)
+    print('"Reconnecting..."')
+    print('"Failed to connect"')
+    time.sleep(3)
+    print()
+    print(".̲͈.̼̳..̦̖̣̳͈..̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞")
+    print()
+    print()
+    print()
+    print("      GAME OVER")
+    print()
+    print()
+    print(".̹̼̞̤͈.̻̙͎.͕̗̼̺̬.̞̘...̲͈.̼̳..̦̖̣̳͈..̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙")
+    print()
+    while True:
+        print('"Retry (yes / no)"')
+        go_continue = str(input("- "))
         print()
-        print('"Connection lost..."')
-        time.sleep(2)
-        print('"Reconnecting..."')
-        print('"Failed to connect"')
-        time.sleep(3)
         print()
-        print()
-        print()
-        print()
-        print("GAME OVER")
-        print()
-        print()
-        print()
-        print()
-        while True:
-            print('"Retry (yes / no)"')
-            go_continue = str(input(""))
-            print()
-            print()
-            if go_continue == "yes" or go_continue == "y" or go_continue == "accept":
-                start()
-            elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
-                print('"Call Declined"')
+        if go_continue == "yes" or go_continue == "y" or go_continue == "accept":
+            start()
+        elif go_continue == "no" or go_continue == "n" or go_continue == "decline":
+            print('"Call Declined"')
 
 # ---------------------------COUNTDOWN(Act16)----------------------------
 def countdown():
@@ -309,7 +310,7 @@ def pitsalt():
 def finaldeed():
     while True:
         diaz("What do you think I should do? (kill him and take the keycard / trade the gun for the key)")
-        decisionmaker = input("")
+        decisionmaker = input("- ")
         decisionmaker = decisionmaker.lower()
         if decisionmaker == "trade" or decisionmaker == "give" or decisionmaker == "give him the gun" or decisionmaker == "trade the gun for the card":
             diaz("You better know what I am doing... I will give him my gun for the keycard...")
@@ -362,7 +363,7 @@ def finaldeed():
 
 # --------------------------Judgement(Act9)------------------------------
 def settlement():
-    takeaction = input("")
+    takeaction = input("- ")
     takeaction = takeaction.lower()
     if takeaction == "threaten" or takeaction == "threaten him" or takeaction == "threat" or takeaction == "point the gun at him":
         diaz("I'll insist...")
@@ -564,7 +565,7 @@ def risk():
 # --------------------------Encounter(Act6a)------------------------------
 def fightorflee():
     while True:
-        caveencounter = input("")
+        caveencounter = input("- ")
         caveencounter = caveencounter.lower()
         if caveencounter == "run" or caveencounter == "r" or caveencounter == "run away" or caveencounter == "run towards the exit":
             diaz("OK... I am running, I AM RUNNING!!!")
@@ -801,7 +802,7 @@ def pact():
 def route():
     while True:
         diaz("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
-        pathway = input("")
+        pathway = input("- ")
         pathway = pathway.lower()
         if pathway == "plateau" or pathway == "p" or pathway == "take the plateau" or pathway == "go to the plateau" or pathway == "go through the plateau":
             plateau()
@@ -814,8 +815,8 @@ def start():
     print('"Transmission accepted"')
     print("")
     diaz("Hello!")
-    diaz("Who is this? What is your name? ")
-    name = str(input(""))
+    diaz("Who is this? What is your name?")
+    name = str(input("- "))
     time.sleep(2)
     diaz("Finally... Somebody! You must be the assigned Operator, from Stationary division EPSILON.")
     time.sleep(1)
@@ -915,7 +916,7 @@ print("")
 # --------------------------Play or Close the game------------------------------
 while True:
     print("Accept transmission? (accept / decline)") 
-    startgame = input("")
+    startgame = input("- ")
     startgame = startgame.lower()
     if startgame == "yes" or startgame == "y" or startgame == "accept":
         start()
