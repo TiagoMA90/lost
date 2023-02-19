@@ -102,7 +102,7 @@ def getaway():
         handleposition()
 
     def handleposition():
-        position = int(input("I pressed pressed number "))
+        position = int(input("I pressed number "))
         position = int(position)
         board[position] = "X"
         display_board()
@@ -164,6 +164,7 @@ def puzzle():
         gameover()
     else:
         print('"Access granted. Systems online"')
+        print()
         time.sleep(2)
         diaz("Bingo!, you unlocked it! Wait a second... ")
         
@@ -662,7 +663,7 @@ def cave():
     time.sleep(1)
     diaz("Wait. What is this?...")
     time.sleep(5)
-    diaz("The smell of blood... there's a metalic scent...")
+    diaz("The smell of blood... there's a metallic scent...")
     time.sleep(2)
     diaz("I found part of my crew, what happened in here???")
     time.sleep(1)
