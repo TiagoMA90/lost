@@ -153,9 +153,9 @@ def puzzle():
             print()
             attempts += 1
                 
-            print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
-            print(str(log).replace(',', ''))
-            print("-------------------------")
+        print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
+        print(str(log).replace(',', ''))
+        print("-------------------------")
                 
     if attempts == chances:
         print()
