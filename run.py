@@ -11,7 +11,7 @@ def diaz(text):
     for letters in text:
         sys.stdout.write(letters)
         sys.stdout.flush()
-        time.sleep(.01)
+        time.sleep(.05)
     print("")
 
 # ----------------------------Credits-----------------------------
@@ -101,7 +101,7 @@ def getaway():
         handleposition()
 
     def handleposition():
-        position = input('"Pressed number "')
+        position = int(input('"Pressed number "'))
         position = int(position)
         board[position] = "X"
         display_board()
@@ -168,7 +168,7 @@ def shuttle():
     time.sleep(1)
     diaz("I imagine he didn't have the card with him, so he had to go back.")
     time.sleep(2)
-    diaz("The power cells are in place.")
+    diaz("The keycard worked.... The power cells are in place.")
     time.sleep(1)
     diaz("I just need to power up the ignition panels.")
     time.sleep(5)
@@ -398,7 +398,7 @@ def settlement():
 def pits():
     diaz("I made my way to the pits...")
     time.sleep(2)
-    diaz("It's very wind here...")
+    diaz("It's very windy here...")
     print(" ")
     print('"Connection lost..."')
     time.sleep(1)
@@ -557,38 +557,39 @@ def risk():
 
 # --------------------------Encounter(Act6a)------------------------------
 def fightorflee():
-    caveencounter = input("")
-    caveencounter = caveencounter.lower()
-    if caveencounter == "run" or caveencounter == "r" or caveencounter == "run away" or caveencounter == "run towards the exit":
-        diaz("OK... I am running, I AM RUNNING!!!")
-        time.sleep(10)
-        diaz("It's after me!")
-        time.sleep(2)
-        diaz("I made it... I made it to the exit!")
-        time.sleep(3)
-        diaz("I can see the pits from down here. I'll contact you once I get to my next checkpoint.")
-        time.sleep(10)
+    while True:
+        caveencounter = input("")
+        caveencounter = caveencounter.lower()
+        if caveencounter == "run" or caveencounter == "r" or caveencounter == "run away" or caveencounter == "run towards the exit":
+            diaz("OK... I am running, I AM RUNNING!!!")
+            time.sleep(10)
+            diaz("It's after me!")
+            time.sleep(2)
+            diaz("I made it... I made it to the exit!")
+            time.sleep(3)
+            diaz("I can see the pits from down here. I'll contact you once I get to my next checkpoint.")
+            time.sleep(10)
 
-        pits()
+            pits()
 
-    elif caveencounter == "sneak" or caveencounter == "sneak past it" or caveencounter == "stealth" or caveencounter == "move quietly":
-        diaz("Very well... I'll move quietly...")
-        time.sleep(5)
-        diaz("Perhaps it won't hear me...")
-        time.sleep(3)
-        diaz("It's hard to see... I feel warm breathing on my neck...")
-        time.sleep(0.5)
-        diaz("What is this?... NO WAIT!!!")
+        elif caveencounter == "sneak" or caveencounter == "sneak past it" or caveencounter == "stealth" or caveencounter == "move quietly":
+            diaz("Very well... I'll move quietly...")
+            time.sleep(5)
+            diaz("Perhaps it won't hear me...")
+            time.sleep(3)
+            diaz("It's hard to see... I feel warm breathing on my neck...")
+            time.sleep(0.5)
+            diaz("What is this?... NO WAIT!!!")
 
-        gameover()
+            gameover()
 
-    else:
-        diaz("This is a shot in the dark. If I miss, I am dead...")
-        time.sleep(5)
-        diaz("Steady...")
-        time.sleep(5)
+        elif caveencounter == "shoot" or caveencounter == "shoot it" or caveencounter == "blast it" or caveencounter == "fire at will":
+            diaz("This is a shot in the dark. If I miss, I am dead...")
+            time.sleep(5)
+            diaz("Steady...")
+            time.sleep(5)
 
-        risk()
+            risk()
 
 # --------------------------GunHolster(Act5a)------------------------------
 def gunholster():
@@ -777,7 +778,6 @@ def pact():
     print("............................")
     print()
     time.sleep(4)
-    print()
     diaz("The Captain is still missing...")
     time.sleep(2)
     diaz("I oughta find him, in order to leave this place. He should have the keycard for the shuttle.")
@@ -789,8 +789,10 @@ def pact():
     diaz("We haven't found any life forms around... this should be more than enough to conclude that Planet-9 is dead.")
     time.sleep(3)
     diaz("Looks like I arrived at my checkpoint...")
+    route()
 
 # --------------------------Choose a Path------------------------------
+def route():
     while True:
         diaz("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
         pathway = input("")
@@ -855,7 +857,7 @@ def start():
         diaz("Can you stay online and help me? (yes / no)")
         response = input("")
         response = response.lower()
-        if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you":
+        if response == "y" or response == "yes" or response == "sure" or response == "ofcourse" or response == "definetly" or response == "i will stay online" or response == "i will help you" or response == "ok":
             pact()
         elif response == "n" or response == "no" or response == "no way" or response == "no way jose" or response == "sorry" or response == "i can't help you" or response == "not in the mood":
             print('"Call suspended"')
