@@ -1,3 +1,4 @@
+# ----------------------Built-in Modules-----------------------
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
@@ -6,7 +7,8 @@ import time
 import random
 import sys
 
-# ----------------------typewriter function-----------------------
+# ----------------------Typewriter function-----------------------
+# This function a invokes a typewriter effect and determines the how fast Diaz types.
 def diaz(text):
     for letters in text:
         sys.stdout.write(letters)
@@ -45,6 +47,7 @@ def credits():
     gameover()
 
 # ---------------------------GAME OVER----------------------------
+# This function is called if the player makes the wrong call, or at teh end of the Credits
 def gameover():
     print()
     print('"Connection lost..."')
@@ -73,6 +76,7 @@ def gameover():
             print('"Call Declined"')
 
 # ---------------------------COUNTDOWN(Act16)----------------------------
+# This function summons a countdown from 9 to 1, before the credits are called
 def countdown():
     print()
     diaz("You got it!")
@@ -88,6 +92,7 @@ def countdown():
     credits()
 
 # ----------------------------Ignition(Act15)----------------------------
+# This function presents the user with a board of numbers and letters, which the user must press in order to proceed to the next function
 def getaway():
     board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
@@ -116,7 +121,7 @@ def getaway():
     playgame()
     
 # --------------------------Take Off(Act14)------------------------------------
-
+# Block of Text(Narrative)
 def takeoff():
     diaz("Great! So far, so good.")
     time.sleep(3)
@@ -133,6 +138,7 @@ def takeoff():
     getaway()
 
 # -----------------------------Puzzle(Act13)---------------------------------
+# This function calls the user to introduce letters to find a secrete word, similar to Hangman
 def puzzle():
     password = "python"
     attempts = 0
@@ -308,6 +314,7 @@ def pitsalt():
     negotiation()
 
 # --------------------------Leap(Act10)------------------------------
+# Block of Text(Narrative)
 def finaldeed():
     while True:
         diaz("What do you think I should do? (kill him and take the keycard / trade the gun for the key)")
@@ -363,6 +370,7 @@ def finaldeed():
         shuttle()
 
 # --------------------------Judgement(Act9)------------------------------
+# Block of Text(Narrative)
 def settlement():
     takeaction = input("- ")
     takeaction = takeaction.lower()
@@ -383,6 +391,7 @@ def settlement():
         finaldeed()
 
 # --------------------------Killer(Act8)------------------------------
+# Block of Text(Narrative)
     elif takeaction == "shoot" or takeaction == "shoot him dead" or takeaction == "kill" or takeaction == "kill him":
         diaz("It's the last bullet... I better know what I am doing...")
         diaz("I wonder if putting him out of his misery is the correct thing to do.")
@@ -403,6 +412,7 @@ def settlement():
         shuttle()
 
 # --------------------------Pits(Act7)------------------------------
+# Block of Text(Narrative)
 def pits():
     diaz("I made my way to the pits...")
     time.sleep(2)
@@ -457,6 +467,7 @@ def pits():
 
 
 # --------------------------Keycard(Act5b)------------------------------
+# This function allows the user to answer question, which one must answer correctly within 2 chances, else gameover() is called.
 def keycard():
     password = "virgo"
     guess = ""
@@ -491,6 +502,7 @@ def keycard():
         pitsalt()
 
 # --------------------------Plateau(Act4b)------------------------------
+# Block of Text(Narrative)
 def plateau():
     diaz("It's a long walk, and very hot in the open. I should get back to you in a minute.")
     time.sleep(30)
@@ -534,6 +546,7 @@ def plateau():
     keycard()
 
 # --------------------------Gun(Act7a)------------------------------
+# Block of Text(Narrative)
 def risk():
     outcome = ["hit", "miss"]
     shot = random.choice(outcome)
@@ -564,6 +577,7 @@ def risk():
 
 
 # --------------------------Encounter(Act6a)------------------------------
+# This function allows the user to make a choice within the narrative
 def fightorflee():
     while True:
         caveencounter = input("- ")
@@ -600,6 +614,7 @@ def fightorflee():
             risk()
 
 # --------------------------GunHolster(Act5a)------------------------------
+# This function allows the user to answer question, which one must answer correctly within 3 chances, else gameover() is called.
 def gunholster():
     password = "emma"
     guess = ""
@@ -634,6 +649,7 @@ def gunholster():
         fightorflee()
 
 # --------------------------Cave(Act4a)------------------------------
+# Block of Text(Narrative)
 def cave():
     diaz("Very well then... I shall enter the depths of this cave.")
     time.sleep(5)
@@ -699,6 +715,7 @@ def cave():
 
 
 # --------------------------DATA(Act3))------------------------------
+# This function defines a class for the whole crew of this narrative
 def pact():
     
     class Worker:
@@ -800,6 +817,7 @@ def pact():
     route()
 
 # --------------------------Choose a Path------------------------------
+# This function allows the user to make a choice within the narrative
 def route():
     while True:
         diaz("From here on, I should choose a route... The Cave or the Plateau? (go through the plateau / go inside the cave)")
@@ -812,6 +830,7 @@ def route():
             
 
 # --------------------------Accept(Act2)------------------------------
+# Block of Text(Narrative)
 def start():
     print('"Transmission accepted"')
     print("")
@@ -873,7 +892,8 @@ def start():
             
 
 # --------------------------Intro(Act1)------------------------------
-print(Fore.BLUE + "............................................................................................")
+# Block of Text(Narrative)
+print(Fore.BLUE + "...............................................................................")
 time.sleep(2)
 print(datetime.now() + timedelta(days=101775, hours=-5))
 diaz("Final report of Research Starship 'GAMMA'.")
@@ -884,16 +904,16 @@ time.sleep(1)
 diaz("With a little luck, the operator will accept my transmission call...")
 time.sleep(4)
 diaz("This is Diaz, the last survivor of startship GAMMA... logging off.")
-print("............................................................................................")
+print("...............................................................................")
 time.sleep(5)
 print(" ")
-print(".̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞.͙̣̳͎..̲̫̱͇.͎͓̘...̙̦͓̭͙.̝ͅ.̩.̹͓ͅ.̳͇͕.̤̹.̮̥̻.̣̤̫.̻̞̯.̗͖̦̟̮.̖.̻.͍̱ͅ...̹͚͎.̗̜̞.̰.̙̩̲͍.̫̳̮̱.̱̰͕͉..̳.͓͖͖.̗.̞̮̣̰̣.͚̭.͓̩.̞͕̼ͅ.̼̫.̠͙̪..̰̤̙̗.̰̰̳.̺̬̜̯̰.̠͕͕̠.̠̭͖.͓͉̮̹.͔͕̮..̪.̤̯̘̭.͎̣̮.̫̯̫.͚̜̙.͚̦..͎̟.͇.̱̺.̰͖̖̗̠..̮..̫͚.̰ͅ.̥̜͙̫̘.̰͎͖.̹̼̞̤͈.̻̙͎.͕̗̼̺̬.̞̘...̲͈.̼̳..̦̖̣̳͈.")
+print(".̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞.͙̣̳͎..̲̫̱͇.͎͓̘...̙̦͓̭͙.̝ͅ.̩.̹͓ͅ.̳͇͕.̤̹.̮̥̻.̣̤̫.̻̞̯.̗͖̦̟̮.̖.̻.͍̱ͅ...̹͚͎.̗̜̞.̰.̙̩̲͍.̫̳̮̱.̱̰͕͉..̳.͓͖͖.̗.̞̮̣̰̣.͚̭.͓̩.̞͕̼ͅ.̼̫.̠͙̪..̰̤̙̗.̰̰̳.̺̬̜̯̰.̠͕͕̠.̠̭͖.͓͉̮̹.͔͕̮..̪.̤̯̘̭.͎̣̮.̫̯̫.͚̜̙.͚̦..͎̟.͇.̱̺.̰͖̖̗̠..̮..̫͚.̰ͅ.̥̜͙̫̘.̰͎͖.̹̼̞̤͈...̲͈.̼̳..̦̖̣̳͈.")
 print(" ")
-print("                                                                                            ")
-print("                                          ㄥㄖ丂ㄒ                                           ")
-print("                                                                                            ")
+print("                                                                                         ")
+print("                                          ㄥㄖ丂ㄒ                                        ")
+print("                                                                                         ")
 print(" ")
-print(".̫̳̮̱.̱̰͕͉..̳.͓͖͖.̗.̞̮̣̰̣.͚̭.͓̩.̞͕̼ͅ.̼̫.̠͙̪.͇.̱̺.̰͖̖̗̠..̮..̫͚.̰ͅ.̥̜͙̫̘.̰͎͖.̹̼̞̤͈.̻̙͎.͕̗̼̺̬.̞̘...̲͈.̼̳..̦̖̣̳͈..̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞.͙̣̳͎..̲̫̱͇.͎͓̘...̙̦͓̭͙.̝ͅ.̩.̹͓ͅ.̳͇͕.̤̹.̮̥̻.̣̤̫..̰̤̙̗.̰̰̳.̺̬̜̯̰.̠͕͕̠.̠̭͖.͓͉̮̹.͔͕̮..̪.̤̯̘̭.͎̣̮.̫̯̫.͚̜̙.͚̦..͎̟.̻̞̯.̗͖̦̟̮.̖.̻.͍̱ͅ...̹͚͎.̗̜̞.̰.̙̩̲͍")
+print(".̫̳̮̱.̱̰͕͉..̳.͓͖͖.̗.̞̮̣̰̣.͚̭.͓̩.̞͕̼ͅ.̼̫.̠͙̪.͇.̱̺.̰͖̖̗̠..̮..̫͚.̰ͅ.̥̜͙̫̘.̰͎͖.̹̼̞̤͈.̻̙͎.͕̗̼̺̬.̞̘...̲͈.̼̳..̦̖̣̳͈..̪̜̳͓̟.̳͎ͅ.̩̩̰...̭̗͕.̲͙.̜͇͈.̖..̺̟̬̠̞.̹͍̙.͈͙.̲̗̗͙.͙̩͍͇.̼͓̮̺.̯͖͚̞.͙̣̳͎..̲̫̱͇.͎͓̘...̙̦͓̭͙.̝ͅ.̩.̹͓ͅ.̳͇͕.̤̹.̮̥̻.̣̤̫..̰̤̙̗.̰̰̳.̺̬̜̯̰.̠͕͕̠.̠̭͖.͓͉̮̹.͔͕̮..̪.̤̯̘̭.͎̣̮.̫̯̫.͚̜̙.͚̦..͎̟.̻̞̯.̗͖̦̟̮.̖.̻.͍̱ͅ...̹")
 print(" ")
 time.sleep(2)
 print(" ")
@@ -915,6 +935,7 @@ diaz("Hello?! Anybody there?")
 print("")
 
 # --------------------------Play or Close the game------------------------------
+# This function makes a call for the User if one wants to play or not
 while True:
     print("Accept transmission? (accept / decline)") 
     startgame = input("- ")
