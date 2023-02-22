@@ -39,7 +39,13 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 - If the User chose the correct path and beat all challenges, one shall be presented with the Endind.
 - Upon Game Over, the user is greeted with a Retry message. If, by agreeing to this, the user is taken back to the begining of the narrative, as a form of punishment. 
 - The plost guides the User to solve puzzles and engage is challenges such as determining a password via Hangman, playing Rock/Paper/Scissors or answering a Riddle.
-<details><img src="assets/screenshots/gameoverscreenshot.png" alt="Game Over"></details>
+<details>
+<img src="assets/screenshots/pathscreenshot.png" alt="Pathways">
+<img src="assets/screenshots/passwordscreenshot.png" alt="Password">
+<img src="assets/screenshots/puzzlescreenshot.png" alt="Puzzle">
+<img src="assets/screenshots/inputscreenshot.png" alt="Input challenge">
+<img src="assets/screenshots/endscreenshot.png" alt="Ending">
+<img src="assets/screenshots/gameoverscreenshot.png" alt="Game Over"></details>
 
 # Styling
 - The text for the app makes good use of the Colorama module, Sys and Time. Ergo, the text was stylized to the color Red, giving a dark and retro-futuristic look to it.
@@ -55,7 +61,6 @@ The app follows the basic rules of Interactive Fiction where the User must read 
 - if/elif/else - These staments gave the possibility for the user to make choices that would also lead to consequences. Most of the plot ended with these statements as a form of a non-linear narrative.
 - classes - The usage of a class was implemented to make great use, as an example of, the power it brings when creating multiple profiles.
 - lists - Were used to create puzzles, such as the negotiation() and getaway() function. This enabled the possibility to raffle a choice, with the random module, within the lists. It also gave the illusion of pressing a button in the terminal for getaway().
-
 
 
 ## Modules
@@ -119,3 +124,40 @@ The website was deployed via Github:
 - The "Buildmaster" installs "python" followed by "nodejs".
 - Upon successful deployment, retrieve the link for the mock terminal.
 - The live app can be found [here](https://lost-rpg.herokuapp.com/).
+
+## NOTES (Spoiler!) Roadmap, Solutions for the Assessor:
+- Below are the solutions for the game, as it might be tedious to be testing the game over and over
+<details>
+
+      ... -> Accept Transmisstion -> [accept] -> ...
+                                -> [decline] -> game over
+
+         ... -> What is your name? -> [input a name] -> ...
+
+         ... -> Stay online? -> [yes] -> ...
+                                [no]  -> game over
+
+            ... -> cave -> Password for the Holster: [emma]  -> ...
+                           Password for the Holster: mistype -> game over
+
+                   ... -> cave encounter -> [run]   -> ...
+                   ... -> cave encounter -> [sneak] -> game over
+                   ... -> cave encounter -> [shoot] -> random -> ...
+                                                              -> game over
+                                                              
+            ... -> plateau -> Password for the Keycard: [virgo] -> ...
+                           -> Password for the Keycard: mistype -> ...
+
+                  ... confront the Captain(gun): [shoot]    -> ...
+                                                 [threaten] -> [shoot] -> ...
+                                                               [trade] -> ...
+
+                  ... confront the Captain(keycard): [Rock/Paper/Scissors] -> random -> win  -> ...
+                                                                                        lose -> game over
+
+                     ... Solve the enigmatic word: [python] -> ...
+                                                    mistype -> game over
+
+                        ... -> Input the number in schematics: [7] -> end
+                                           anything other than "7" -> game over
+</details>

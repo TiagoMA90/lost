@@ -123,6 +123,7 @@ def getaway():
         handleposition()
 
     def handleposition():
+        # Positions the character X in the board
         position = int(input("I pressed number "))
         position = int(position)
         board[position] = "X"
@@ -178,12 +179,14 @@ def puzzle():
     # While the user has Attempts are below and not equal to the Chances, the deciphered word(joined list after the input) is looped through
     while attempts < chances and "".join(log) != password:
         character = input("Input a character: ")
+        # If the input of the User is in the Password, defined by Length, spoil the letter in the Log
         if character in password:
             for i in range(len(password)):
                 if character == password[i]:
                     log[i] = character
         else:
             print()
+            # Incrememts Attempts by 1
             attempts += 1
 
         print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
@@ -608,7 +611,8 @@ def plateau():
     print("I also retrieved the keycard from the scrapyard, there is also some food left...")
     print("If you want to open the kit, containing the keycard...")
     print("Then it should be the 6th constellation sign of the Zodiac, planet Earth.")
-    print("Careful not to mistype it else it will selfdestruct, with you included. The blast can be fatal.")
+    print("Careful not to mistype it else it will selfdestruct, with you included.")
+    print("The blast can be fatal.")
     print("I had to arm it, because of Van Beek, me and Davies made a detour from him...")
     print("You have two tries, before it explodes.")
     print("The stars, so bright... I think I will lie down here for a while...'")
@@ -791,12 +795,12 @@ def cave():
     print("DOWNLOADING DATA...")
     print("--------------------------------------------------------------------------------")
     print(datetime.now() + timedelta(days=101770, hours=-5))
-    print("'Christ... This Fujin guy, is flipping out...'")
+    print("'Christ... This Fujin guy, is flipping out...")
     print("He insists the only gun onboard belongs to him and to himself only...")
     print("While my life gets to depend on him.")
     print("Who put him in charge? He doesn't let anyone near it...")
     print("The selfish bastard... When he least expects, I will grab it.")
-    print("He thinks he has everything covered...'")
+    print("He thinks he has everything covered...")
     print("I saw him change the password for the holster...")
     print("It's the anthropologists first name.")
     print("He had a crush on her since we made preparations in Mars... what an idiot...")
