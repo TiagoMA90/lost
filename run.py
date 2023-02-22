@@ -125,6 +125,7 @@ def getaway():
             countdown()
         # Otherwise, the User üressed the wron button and it's Game Over
         else:
+            print("Failed to initiate Countdown: 'Permanent Shutdown'")
             # Invokes gameover()
             gameover()
     #Invokes playgame
@@ -178,6 +179,7 @@ def puzzle():
     if attempts == chances:
         print()
         print('"Access denied"')
+        print("- The shuttle has been locked. Diaz must live his remaining days in Planet-9 alone -")
         # invokes gameover()
         gameover()
     # else the user will be sent to the next stage
@@ -240,8 +242,9 @@ def negotiation():
             time.sleep(4)
             shuttle()
             break
-        # Otherwise, if the captain makes it first for the 3 rounsds, Captain wins. and it's Game over for the user
+        # Otherwise, if the captain makes it first for the 3 rounds, Captain wins. and it's Game over for the user
         elif captainscore == 2:
+            print("- Captain Salazar won the game and took Diaz life -")
             # Invokes gameover()
             gameover()
             break
@@ -518,6 +521,7 @@ def keycard():
             outofguess = True
 
     if outofguess:
+        print("- The kit self desctructed and gave a fatal blast to Diaz -")
         # Invokes gameover()
         gameover()
     else:
@@ -612,6 +616,7 @@ def risk():
         diaz("I saw it in a flash. The horror...")
         time.sleep(3)
         # Invokes gameover()
+        print("- Something dwelling the cave got a hold of Diaz, never to be heard of him again -")
         gameover()
 
 
@@ -642,6 +647,7 @@ def fightorflee():
             diaz("It's hard to see... I feel warm breathing on my neck...")
             time.sleep(0.5)
             diaz("What is this?... NO WAIT!!!")
+            print("- Something dwelling the cave got a hold of Diaz, never to be heard of him again -")
             # Invokes gameover()
             gameover()
 
@@ -674,6 +680,7 @@ def gunholster():
 
     # If the user is out of guesses, it's Game Over
     if outofguess:
+        print("- It took Diaz to long to guess the a hold of the Gun. Something got him first -")
         # Invokes gameover()
         gameover()
     # Otherwise the User is sent to the next stage
