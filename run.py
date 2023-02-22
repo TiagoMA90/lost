@@ -9,6 +9,8 @@ import sys
 
 # ----------------------Typewriter function-----------------------
 # This function a invokes a typewriter effect and determines the how fast Diaz types
+
+
 def diaz(text):
     for letters in text:
         sys.stdout.write(letters)
@@ -17,6 +19,8 @@ def diaz(text):
     print("")
 
 # ----------------------------Credits-----------------------------
+
+
 def credits():
     print()
     print()
@@ -49,6 +53,8 @@ def credits():
 
 # ---------------------------GAME OVER----------------------------
 # This function is called if the player makes the wrong call, or at teh end of the Credits
+
+
 def gameover():
     print()
     print('"Connection lost..."')
@@ -80,6 +86,8 @@ def gameover():
 
 # ---------------------------COUNTDOWN(Act16)----------------------------
 # This function summons a countdown from 9 to 1, before the credits are rolled
+
+
 def countdown():
     print()
     diaz("You got it!")
@@ -97,6 +105,8 @@ def countdown():
 
 # ----------------------------Ignition(Act15)----------------------------
 # This function presents the user with a board of numbers and letters, which the user must press in order to proceed to the next function
+
+
 def getaway():
     board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
@@ -105,7 +115,7 @@ def getaway():
         print("D:| " + str(board[0]) + " | " + str(board[1]) + " | " + str(board[2]))
         print("E:| " + str(board[3]) + " | " + str(board[4]) + " | " + str(board[5]))
         print("F:| " + str(board[6]) + " | " + str(board[7]) + " | " + str(board[8]))
-        
+
     def playgame():
         # Invokes display_board()
         display_board()
@@ -118,7 +128,7 @@ def getaway():
         board[position] = "X"
         display_board()
         board[position] = "X"
-        
+
         # If the User presses 7 the X will be marked in the give position and the countdown starts
         if position == 7:
             # Invokes countdown()
@@ -128,11 +138,13 @@ def getaway():
             print("Failed to initiate Countdown: 'Permanent Shutdown'")
             # Invokes gameover()
             gameover()
-    #Invokes playgame
+    # Invokes playgame
     playgame()
-    
+
 # --------------------------Take Off(Act14)------------------------------------
 # Block of Text(Narrative)
+
+
 def takeoff():
     diaz("Great! So far, so good.")
     time.sleep(3)
@@ -151,16 +163,18 @@ def takeoff():
 
 # -----------------------------Puzzle(Act13)---------------------------------
 # This function calls the user to introduce letters to find a secrete word, similar to Hangman
+
+
 def puzzle():
     password = "python"
     attempts = 0
     chances = 3
     log = ["*"]*len(password)
-    
+
     print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
     print(str(log).replace(',', ''))
     print("-------------------------")
-    
+
     # While the user has Attempts and not equal or above its Chances, the deciphered word(joined list after input) is looped through
     while attempts < chances and "".join(log) != password:
         character = input("Input a character: ")
@@ -171,11 +185,12 @@ def puzzle():
         else:
             print()
             attempts += 1
-                
+
         print("--------| " + str(attempts) + " | " + str(chances) + " |--------")
         print(str(log).replace(',', ''))
         print("-------------------------")
-    # if the number of Attemps have reached the number of Chances it's Game Over            
+
+    # if the number of Attemps have reached the number of Chances it's Game Over
     if attempts == chances:
         print()
         print('"Access denied"')
@@ -192,6 +207,8 @@ def puzzle():
         takeoff()
 
 # --------------------------Shuttle(Act12)------------------------------
+
+
 def shuttle():
     diaz("Here I am, I found the Emergency shuttle.")
     diaz("Ernst made it here, before he went back to base. I can see his workers tag.")
@@ -213,6 +230,8 @@ def shuttle():
 
 # --------------------------Rock Paper Scissors(Act11)-------------------------
 # Rock, Paper, Scissors function that lets the User go against the AI of Captain. The first to reach the score of 3 wins
+
+
 def negotiation():
     captainscore = 0
     diazscore = 0
@@ -248,7 +267,8 @@ def negotiation():
             # Invokes gameover()
             gameover()
             break
-        # If Diaz & Capatin draw the same hands it's a draw    
+
+        # If Diaz & Capatin draw the same hands it's a draw
         if diaz == captain:
             print("Captain: ", captain)
             print("Diaz: ", diaz)
@@ -343,6 +363,8 @@ def pitsalt():
 
 # --------------------------Leap(Act10)------------------------------
 # Block of Text(Narrative)
+
+
 def finaldeed():
     # This loop locks the User here, untill a correct choice is typed
     while True:
@@ -378,7 +400,6 @@ def finaldeed():
             # Invokes shuttle()
             shuttle()
 
-
         elif decisionmaker == "shoot" or decisionmaker == "shoot him dead" or decisionmaker == "kill" or decisionmaker == "kill him":
             diaz("It's the last bullet... I better know what I am doing...")
             time.sleep(1)
@@ -401,6 +422,8 @@ def finaldeed():
 
 # --------------------------Judgement(Act9)------------------------------
 # Block of Text(Narrative)
+
+
 def settlement():
     takeaction = input("- ")
     takeaction = takeaction.lower()
@@ -446,6 +469,8 @@ def settlement():
 
 # --------------------------Pits(Act7)------------------------------
 # Block of Text(Narrative)
+
+
 def pits():
     diaz("I made my way to the pits...")
     time.sleep(2)
@@ -512,7 +537,7 @@ def keycard():
     outofguess = False
     # This loop locks the User here, untill a correct answer is typed
     # while the correct guess is not the same as password the outofguesses remains false, the guess count is incremented by 1, otherwise it's true
-    while guess != password and not(outofguess):
+    while guess != password and not (outofguess):
         if countguess < maxguess:
             guess = input("Password: ")
             guess = guess.lower()
@@ -543,6 +568,8 @@ def keycard():
 
 # --------------------------Plateau(Act4b)------------------------------
 # Block of Text(Narrative)
+
+
 def plateau():
     diaz("It's a long walk and very hot in the open. I should get back to you in a minute.")
     time.sleep(20)
@@ -588,6 +615,8 @@ def plateau():
 # --------------------------Gun(Act7a)------------------------------
 # Block of Text(Narrative)
 # This function makes use of the random module
+
+
 def risk():
     # Either "hit" or "miss", the computer draws one or another
     outcome = ["hit", "miss"]
@@ -609,7 +638,7 @@ def risk():
         time.sleep(15)
         # Invokes pits()
         pits()
-        
+
     else:
         diaz("Damn...I missed it! No more bullets...!")
         time.sleep(1)
@@ -662,6 +691,8 @@ def fightorflee():
 # --------------------------GunHolster(Act5a)------------------------------
 # This function allows the user to answer question, which one must answer correctly within 3 chances, else gameover() is called.
 # Function that prompts User to type in the correct answer, else it's Game Over
+
+
 def gunholster():
     password = "emma"
     guess = ""
@@ -670,7 +701,7 @@ def gunholster():
     outofguess = False
     # This loop locks the User here, untill a correct choice is typed
     # while the correct guesse is not the same as password the outofguesses remains false, the guess count is incremented by 1, otherwise it's true
-    while guess != password and not(outofguess):
+    while guess != password and not (outofguess):
         if countguess < maxguess:
             guess = input("Password: ")
             guess = guess.lower()
@@ -704,6 +735,8 @@ def gunholster():
 
 # --------------------------Cave(Act4a)------------------------------
 # Block of Text(Narrative)
+
+
 def cave():
     diaz("Very well then... I shall enter the depths of this cave.")
     time.sleep(5)
@@ -746,7 +779,7 @@ def cave():
     time.sleep(3)
     diaz("It requires a password... to remove it from from Van Beeks holster...")
     time.sleep(3)
-    diaz("There is a note... I am uploading it to you, right now...")  
+    diaz("There is a note... I am uploading it to you, right now...")
     print("")
     print("--------------------------------------------------------------------------------")
     print("DOWNLOADING DATA...")
@@ -776,7 +809,7 @@ def cave():
 def pact():
     # Class that manifests information about characters that are linked below
     class Worker:
-        def __init__(self,name,age,planet,duty,status):
+        def __init__(self, name, age, planet, duty, status):
             self.name = name
             self.age = age
             self.planet = planet
@@ -880,6 +913,8 @@ def pact():
 
 # --------------------------Choose a Path------------------------------
 # This function allows the user to make a choice within the narrative
+
+
 def route():
     # This loop locks the User here, untill a correct choice is typed
     while True:
@@ -893,10 +928,11 @@ def route():
         # Else, go through the Cave
         elif pathway == "cave" or pathway == "c" or pathway == "take the cave" or pathway == "go inside the cave" or pathway == "go through the cave":
             cave()
-            
 
 # --------------------------Accept(Act2)------------------------------
 # Block of Text(Narrative)
+
+
 def start():
     print('"Transmission accepted"')
     print("")
@@ -965,10 +1001,11 @@ def start():
             print('"Call suspended"')
             # Invokes gameover()
             gameover()
-            
 
 # --------------------------Intro(Act1)------------------------------
 # Block of Text(Narrative)
+
+
 print(Fore.RED + "...............................................................................")
 time.sleep(2)
 print(datetime.now() + timedelta(days=101775, hours=-5))
@@ -1014,7 +1051,7 @@ print("")
 # --------------------------Play or Close the game------------------------------
 # This function makes a call for the User if one wants to play or not
 while True:
-    print("Accept transmission? (accept / decline)") 
+    print("Accept transmission? (accept / decline)")
     startgame = input("- ")
     startgame = startgame.lower()
     # If the answer is Yes, the User moves to the next act
