@@ -16,6 +16,8 @@ Eventually this project was shortened into a smaller scale, due to time consumpt
 It makes good use of familiar concepts that were taught throughout the Python and JavaScript modules, such Built-in modules, Functions, if/elif/else, Classes, Lists, While Loops, etc.
 Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](https://en.wikipedia.org/wiki/Interactive_fiction) as main inspiration for its development, where the user must input text in order to interact with the storyline.
 
+<img src="assets/screenshots/walkthrough.png" alt="Walkthrough braches">
+
 # (UPDATE)Features
 - The narrative features 2 paths, of which incorporate small choices and challenges throghout the journey.
 - It features a selection of functionalities such as the possibility to make a choice, that will eventually determine which path the main character will take.
@@ -26,7 +28,7 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 
 
 # Styling
-- The text for the app makes good use of the Colorama module, Sys and Time. Ergo, the text was stylized to the color Red, giving a dark and retro-futuristic look to it.
+- The text for the app makes good use of the Colorama module, Sys and Time. Ergo, the text was stylized to the color Cyan, giving a dark and retro-futuristic look to it.
 - Furthermore, a typewritting effect was produced to give the reader the illusion of suspense, when interacting with character Diaz.
 - Moreover, the title "LOST" was stylized with ASCII characters.
 - The style for the HTML file was also updated. The Button was stylized with colors matching the terminal and the white background turned into dark gray, as the contrast between the app was too bright.
@@ -52,7 +54,9 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 # (UPDATE)Assay
 ## Testing
 - Testing was manually perfomed by trying every possible route in the narrative and possible choices and mistakes within a piece of block of code.
-- All functions are invoked in accordance to each act and respond accordingly without errors whatsoever.
+- All functions are invoked in accordance to each act and respond accordingly without any errors whatsoever.
+- Testing was also perfomed using the [CI Python Linter](https://pep8ci.herokuapp.com/), errors have been documented and solved with the exception of:
+  - X: E501 line too long (x > 79 characters) As long lines are an essential feauture for the narrative of this project.
 
 # Technologies
 ## Languages

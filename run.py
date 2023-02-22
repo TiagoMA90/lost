@@ -1006,7 +1006,7 @@ def start():
 # Block of Text(Narrative)
 
 
-print(Fore.RED + "...............................................................................")
+print(Fore.CYAN + "...............................................................................")
 time.sleep(2)
 print(datetime.now() + timedelta(days=101775, hours=-5))
 diaz("Final report of Research Starship 'GAMMA'.")
