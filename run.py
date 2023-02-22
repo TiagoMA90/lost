@@ -544,8 +544,8 @@ def keycard():
 # --------------------------Plateau(Act4b)------------------------------
 # Block of Text(Narrative)
 def plateau():
-    diaz("It's a long walk, and very hot in the open. I should get back to you in a minute.")
-    time.sleep(30)
+    diaz("It's a long walk and very hot in the open. I should get back to you in a minute.")
+    time.sleep(20)
     diaz("Great, I am back. Good to know you waited for me... I finally reached the checkpoint.")
     time.sleep(3)
     diaz("Do you want to hear the good news or bad news? Well, I assume both...")
