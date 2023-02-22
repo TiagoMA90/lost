@@ -161,7 +161,7 @@ def puzzle():
     print(str(log).replace(',', ''))
     print("-------------------------")
     
-    # While the user has Attempts and not equal/above the Chances & the deciphered the hidden word(joined list after input)
+    # While the user has Attempts and not equal or above its Chances, the deciphered word(joined list after input) is looped through
     while attempts < chances and "".join(log) != password:
         character = input("Input a character: ")
         if character in password:
