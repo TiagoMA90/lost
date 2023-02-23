@@ -13,7 +13,7 @@ This app is targeted to people looking for an interactive narrative, similar to 
 ## Python
 The app was designed with the intend to give users a non-linear experience, where different paths would lead to different puzzles and therefore different outcomes.
 
-The game started out as a very ambitious project, with multiple routes to be taken upon, that would break into varied tree braches and puzzles to be solved and that would eventually offer replayability to the users.
+The game started out as a very ambitious project, with multiple routes to be taken upon, that would break into varied tree braches and puzzles to be solved and that would eventually offer replayability to the users, after multiple endings.
 In the end, this project was shortened into smaller scale, due to time consumption, dateline limitations and hard conciliations.
 It makes good use of familiar concepts that were taught throughout the Python and JavaScript modules, such as Built-in modules, Functions, if/elif/else, Classes, Lists, While Loops, etc.
 Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](https://en.wikipedia.org/wiki/Interactive_fiction) as main inspiration for its development, where the user must input text in order to insteract with the storyline.
