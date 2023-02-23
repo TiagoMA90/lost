@@ -102,13 +102,13 @@ def gameover():
         print()
         print()
         if (go_continue == "yes"
-        or go_continue == "y"
-        or go_continue == "accept"):
+            or go_continue == "y"
+                or go_continue == "accept"):
             # Invokes start()
             start()
         elif (go_continue == "no"
-        or go_continue == "n"
-        or go_continue == "decline"):
+                or go_continue == "n"
+                or go_continue == "decline"):
             print('"Call Declined"')
 
 # ---------------------------COUNTDOWN(Act16)----------------------------
@@ -441,9 +441,9 @@ def finaldeed():
         decisionmaker = input("- ")
         decisionmaker = decisionmaker.lower()
         if (decisionmaker == "trade"
-        or decisionmaker == "give"
-        or decisionmaker == "give him the gun"
-        or decisionmaker == "trade the gun for the card"):
+            or decisionmaker == "give"
+            or decisionmaker == "give him the gun"
+                or decisionmaker == "trade the gun for the card"):
             diaz(
                 "You better know what I am doing... "
                 "I will give him my gun for the keycard..."
@@ -481,9 +481,9 @@ def finaldeed():
             shuttle()
 
         elif (decisionmaker == "shoot"
-        or decisionmaker == "shoot him dead"
-        or decisionmaker == "kill"
-        or decisionmaker == "kill him"):
+                or decisionmaker == "shoot him dead"
+                or decisionmaker == "kill"
+                or decisionmaker == "kill him"):
             diaz("It's the last bullet... I better know what I am doing...")
             time.sleep(1)
             diaz(
@@ -524,9 +524,9 @@ def settlement():
     takeaction = takeaction.lower()
     # The user either chooses this path
     if (takeaction == "threaten"
-    or takeaction == "threaten him"
-    or takeaction == "threat"
-    or takeaction == "point the gun at him"):
+        or takeaction == "threaten him"
+        or takeaction == "threat"
+            or takeaction == "point the gun at him"):
         diaz("I'll insist...")
         time.sleep(2)
         diaz("I pointed the gun at him!")
@@ -550,9 +550,9 @@ def settlement():
 # --------------------------Killer(Act8)------------------------------
     # Otherwise the User takes this path
     elif (takeaction == "shoot"
-    or takeaction == "shoot him dead"
-    or takeaction == "kill"
-    or takeaction == "kill him"):
+            or takeaction == "shoot him dead"
+            or takeaction == "kill"
+            or takeaction == "kill him"):
         diaz("It's the last bullet... I better know what I am doing...")
         diaz(
             "I wonder if putting him out of his misery "
@@ -839,9 +839,9 @@ def fightorflee():
         caveencounter = input("- ")
         caveencounter = caveencounter.lower()
         if (caveencounter == "run"
-        or caveencounter == "r"
-        or caveencounter == "run away"
-        or caveencounter == "run towards the exit"):
+            or caveencounter == "r"
+            or caveencounter == "run away"
+                or caveencounter == "run towards the exit"):
             diaz("OK... I am running, I AM RUNNING!!!")
             time.sleep(10)
             diaz("It's after me!")
@@ -855,9 +855,9 @@ def fightorflee():
             pits()
 
         elif (caveencounter == "sneak"
-        or caveencounter == "sneak past it"
-        or caveencounter == "stealth"
-        or caveencounter == "move quietly"):
+                or caveencounter == "sneak past it"
+                or caveencounter == "stealth"
+                or caveencounter == "move quietly"):
             diaz("Very well... I'll move quietly...")
             time.sleep(5)
             diaz("Perhaps it won't hear me...")
@@ -873,9 +873,9 @@ def fightorflee():
             gameover()
 
         elif (caveencounter == "shoot"
-        or caveencounter == "shoot it"
-        or caveencounter == "blast it"
-        or caveencounter == "fire at will"):
+                or caveencounter == "shoot it"
+                or caveencounter == "blast it"
+                or caveencounter == "fire at will"):
             diaz("This is a shot in the dark. If I miss, I am dead...")
             time.sleep(5)
             diaz("Steady...")
@@ -1197,17 +1197,17 @@ def route():
         # Here the User is asked to make a choice
         # either take the route towards the Plateau
         if (pathway == "plateau"
-        or pathway == "p"
-        or pathway == "take the plateau"
-        or pathway == "go to the plateau"
-        or pathway == "go through the plateau"):
+            or pathway == "p"
+            or pathway == "take the plateau"
+            or pathway == "go to the plateau"
+                or pathway == "go through the plateau"):
             plateau()
         # Else, go through the Cave
         elif (pathway == "cave"
-        or pathway == "c"
-        or pathway == "take the cave"
-        or pathway == "go inside the cave"
-        or pathway == "go through the cave"):
+                or pathway == "c"
+                or pathway == "take the cave"
+                or pathway == "go inside the cave"
+                or pathway == "go through the cave"):
             cave()
 
 # --------------------------Accept(Act2)------------------------------
@@ -1297,24 +1297,24 @@ def start():
         response = response.lower()
         # If the input is positive, the User is sent to the next act
         if (response == "y"
-        or response == "yes"
-        or response == "sure"
-        or response == "ofcourse"
-        or response == "definetly"
-        or response == "i will stay online"
-        or response == "i will help you"
-        or response == "ok"):
+            or response == "yes"
+            or response == "sure"
+            or response == "ofcourse"
+            or response == "definetly"
+            or response == "i will stay online"
+            or response == "i will help you"
+                or response == "ok"):
             # Invokes pact()
             pact()
         # Otherwise it's Game Over for the User
         elif (response == "n"
-        or response == "no"
-        or response == "no way"
-        or response == "no way jose"
-        or response == "nah"
-        or response == "sorry"
-        or response == "i can't help you"
-        or response == "not in the mood"):
+                or response == "no"
+                or response == "no way"
+                or response == "no way jose"
+                or response == "nah"
+                or response == "sorry"
+                or response == "i can't help you"
+                or response == "not in the mood"):
             print('"Call suspended"')
             # Invokes gameover()
             gameover()
@@ -1405,14 +1405,14 @@ while True:
     startgame = startgame.lower()
     # If the answer is Yes, the User moves to the next act
     if (startgame == "yes"
-    or startgame == "y"
-    or startgame == "accept"):
+            or startgame == "y"
+            or startgame == "accept"):
         # Invokes start()
         start()
     # Otherwise it's Game Over
     elif (startgame == "no"
-    or startgame == "n"
-    or startgame == "decline"):
+            or startgame == "n"
+            or startgame == "decline"):
         print("Call Declined")
         # invokes Game over
         gameover()

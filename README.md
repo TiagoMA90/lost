@@ -46,6 +46,9 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 <img src="assets/screenshots/endscreenshot.png" alt="Ending">
 <img src="assets/screenshots/gameoverscreenshot.png" alt="Game Over">
 
+# Missing features I wish to add:
+- More paths, options and choices, more responsiveness to consequences, more puzzles and more dynamic endings, based on good or bad choices choices.
+
 # Styling
 - The text for the app makes good use of the Colorama module, Sys and Time. Ergo, the text was stylized to the color Red, giving a dark and retro-futuristic look to it.
 - Furthermore, a typewritting effect was produced to give the reader the illusion of suspense, when interacting with character Diaz.
@@ -76,9 +79,8 @@ The following modules were imported to achieve the desired responsiveness.
 ## Testing
 - Testing was manually perfomed by trying every possible route in the narrative and possible answers & mistakes within a piece of block of code.
 - All functions are invoked in accordance to each act and respond accordingly without any errors whatsoever.
-- Testing was also perfomed on run.py, using the [CI Python Linter](https://pep8ci.herokuapp.com/), errors have been documented and solved with the exception of:
-  - "X: E501 line too long (x > 79 characters)" As long lines are an essential feauture for purpose of this project. This app is a text driven narrative, with multiple lines of dialogue.
-<img src="assets/screenshots/lint.png" alt="CI Python Lint">
+- Testing was also perfomed on run.py, using the [CI Python Linter](https://pep8ci.herokuapp.com/), errors have been identified and solved.
+<img src="assets/screenshots/linter.png" alt="CI Python Lint">
 
 # Technologies
 ## Languages
