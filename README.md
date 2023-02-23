@@ -39,7 +39,7 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 - If the User chose the correct path and beat all challenges, one shall be presented with the Endind.
 - Upon Game Over, the user is greeted with a Retry message. If, by agreeing to this, the user is taken back to the begining of the narrative, as a form of punishment. 
 - The plost guides the User to solve puzzles and engage is challenges such as determining a password via Hangman, playing Rock/Paper/Scissors or answering a Riddle.
-- An Audio player was created, for an atmospheric climate. It autoplays.
+- An Audio player was created, for an atmospheric climate.
 - A "Run Program" button si accessible for the User to reset the script from the start.(Default function, developed by Code Institute)
 
 <img src="assets/screenshots/passwordscreenshot.png" alt="Password">
