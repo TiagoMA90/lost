@@ -39,7 +39,6 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 - If the User chose the correct path and beat all challenges, one shall be presented with the Endind.
 - Upon Game Over, the user is greeted with a Retry message. If, by agreeing to this, the user is taken back to the begining of the narrative, as a form of punishment. 
 - The plost guides the User to solve puzzles and engage is challenges such as determining a password via Hangman, playing Rock/Paper/Scissors or answering a Riddle.
-- An Audio player was created, for an atmospheric climate.
 - A "Run Program" button si accessible for the User to reset the script from the start.(Default function, developed by Code Institute)
 
 <img src="assets/screenshots/passwordscreenshot.png" alt="Password">
@@ -50,6 +49,7 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 
 # Missing features I wish to add:
 - More paths, options and choices, more responsiveness to consequences, more puzzles and more dynamic endings, based on good or bad choices choices.
+- An Audio player, for an atmospheric climate. (Unsupported by Heroku?)
 
 # Styling
 - The text for the app makes good use of the Colorama module, Sys and Time. Ergo, the text was stylized to the color Red, giving a dark and retro-futuristic look to it.
@@ -174,5 +174,4 @@ The following sources were resorted in the creation of this website:
 
 - [Code Institute](https://learn.codeinstitute.net/dashboard) was used as guidance platform for the development of this project (Python Module).
 - [freeCodeCamp](https://www.youtube.com/watch?v=rfscVS0vtbw) was used as orientation platform for the development of this project (Python beginner course).
-- Audio originally from "The Thing(1982)" composed by Ennio Morricone - "Humanity (Pt. 2)", exctracted from [here](https://www.youtube.com/watch?v=I9Doo9ajCyQ) and applyed to the body of this app
 - stackOverflow was used as a solution platform for broken code.
