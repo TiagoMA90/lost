@@ -39,13 +39,12 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 - If the User chose the correct path and beat all challenges, one shall be presented with the Endind.
 - Upon Game Over, the user is greeted with a Retry message. If, by agreeing to this, the user is taken back to the begining of the narrative, as a form of punishment. 
 - The plost guides the User to solve puzzles and engage is challenges such as determining a password via Hangman, playing Rock/Paper/Scissors or answering a Riddle.
-<details>
-<img src="assets/screenshots/pathscreenshot.png" alt="Pathways">
+
 <img src="assets/screenshots/passwordscreenshot.png" alt="Password">
 <img src="assets/screenshots/puzzlescreenshot.png" alt="Puzzle">
 <img src="assets/screenshots/inputscreenshot.png" alt="Input challenge">
 <img src="assets/screenshots/endscreenshot.png" alt="Ending">
-<img src="assets/screenshots/gameoverscreenshot.png" alt="Game Over"></details>
+<img src="assets/screenshots/gameoverscreenshot.png" alt="Game Over">
 
 # Styling
 - The text for the app makes good use of the Colorama module, Sys and Time. Ergo, the text was stylized to the color Red, giving a dark and retro-futuristic look to it.
@@ -62,6 +61,8 @@ The app follows the basic rules of Interactive Fiction where the User must read 
 - classes - The usage of a class was implemented to make great use, as an example of, the power it brings when creating multiple profiles.
 - lists - Were used to create puzzles, such as the negotiation() and getaway() function. This enabled the possibility to raffle a choice, with the random module, within the lists. It also gave the illusion of pressing a button in the terminal for getaway().
 
+The challenges can be more or less defined as follows:
+<img src="assets/screenshots/lucidchart.png" alt="Charted logic">
 
 ## Modules
 The following modules were imported to achieve the desired responsiveness.
@@ -86,7 +87,8 @@ The app was written under the Backend programing language "Python".
 
 ## Other forms of development as follows:
 - [Programiz](https://www.programiz.com/python-programming/online-compiler/) - Online compiler (Used to test functions and batches of code separatly)
-- [Patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - Text too ASCII Art Generator
+- [Patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - ASCII Art Generator
+- [Lucidchart](https://www.lucidchart.com/) Mapping Charts application
 - [Github](https://github.com/) - Host for the repository
 - [Gitpod](https://gitpod.io/) - Code editor
 - [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project
@@ -161,3 +163,11 @@ The website was deployed via Github:
                         ... -> Input the number in schematics: [7] -> end
                                            anything other than "7" -> game over
 </details>
+
+# Credits
+The following sources were resorted in the creation of this website:
+
+- [Code Institute](https://learn.codeinstitute.net/dashboard) was used as guidance platform for the development of this project (Python Module).
+- [freeCodeCamp](https://www.youtube.com/watch?v=rfscVS0vtbw) was used as orientation platform for the development of this project (Python beginner course).
+- The following video was used as a refrence on applying onclick audio.
+- stackOverflow was used as a solution platform for broken code.
