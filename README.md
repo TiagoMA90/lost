@@ -77,7 +77,7 @@ The following modules were imported to achieve the desired responsiveness.
 - Testing was manually perfomed by trying every possible route in the narrative and possible answers & mistakes within a piece of block of code.
 - All functions are invoked in accordance to each act and respond accordingly without any errors whatsoever.
 - Testing was also perfomed on run.py, using the [CI Python Linter](https://pep8ci.herokuapp.com/), errors have been documented and solved with the exception of:
-  - "X: E501 line too long (x > 79 characters)" As long lines are an essential feauture, for the narrative of this project.
+  - "X: E501 line too long (x > 79 characters)" As long lines are an essential feauture for purpose of this project. This app is a text driven narrative, with multiple lines of dialogue.
 <img src="assets/screenshots/lint.png" alt="CI Python Lint">
 
 # Technologies
@@ -89,6 +89,7 @@ The app was written under the Backend programing language "Python".
 - [Programiz](https://www.programiz.com/python-programming/online-compiler/) - Online compiler (Used to test functions and batches of code separatly)
 - [Patorjk](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) - ASCII Art Generator
 - [Lucidchart](https://www.lucidchart.com/) Mapping Charts application
+- [CI Python Linter](https://pep8ci.herokuapp.com/) CI Python testing tool
 - [Github](https://github.com/) - Host for the repository
 - [Gitpod](https://gitpod.io/) - Code editor
 - [Heroku](https://id.heroku.com/) - Cloud platform/Host the live project

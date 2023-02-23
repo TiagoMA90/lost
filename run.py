@@ -961,7 +961,7 @@ def start():
     diaz("I have been trying to contact you guys for days.")
     time.sleep(2)
     diaz("Listen " + name + "... I am the deployed documenter, Diaz...")
-    diaz("I am the sole survivour of SIGMA-02, Planet-9 - Research team.")
+    diaz("I am the sole survivor of SIGMA-02, Planet-9 - Research team.")
     time.sleep(2)
     diaz("Me and my crew disembarked from Mars en route to Planet-9 two months ago.")
     diaz("Our ship GAMMA crashed...")
