@@ -39,6 +39,8 @@ Upon creating this project, the developer resorted ["Interactive Fiction(IF)"](h
 - If the User chose the correct path and beat all challenges, one shall be presented with the Endind.
 - Upon Game Over, the user is greeted with a Retry message. If, by agreeing to this, the user is taken back to the begining of the narrative, as a form of punishment. 
 - The plost guides the User to solve puzzles and engage is challenges such as determining a password via Hangman, playing Rock/Paper/Scissors or answering a Riddle.
+- An Audio player was created, for an atmospheric climate. It autoplays.
+- A "Run Program" button si accessible for the User to reset the script from the start.(Default function, developed by Code Institute)
 
 <img src="assets/screenshots/passwordscreenshot.png" alt="Password">
 <img src="assets/screenshots/puzzlescreenshot.png" alt="Puzzle">
@@ -172,5 +174,5 @@ The following sources were resorted in the creation of this website:
 
 - [Code Institute](https://learn.codeinstitute.net/dashboard) was used as guidance platform for the development of this project (Python Module).
 - [freeCodeCamp](https://www.youtube.com/watch?v=rfscVS0vtbw) was used as orientation platform for the development of this project (Python beginner course).
-- The following video was used as a refrence on applying onclick audio.
+- Audio originally from "The Thing(1982)" composed by Ennio Morricone - "Humanity (Pt. 2)", exctracted from [here](https://www.youtube.com/watch?v=I9Doo9ajCyQ) and applyed to the body of this app
 - stackOverflow was used as a solution platform for broken code.

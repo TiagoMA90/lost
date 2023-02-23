@@ -12,8 +12,23 @@
     <style>
         body {
             font-family: Arial;
-            background-color: #2c2c2c;
+            background: linear-gradient(-45deg, #000000,#240000, #420000, #660000);
+            animation: change 10s ease-in-out infinite;
         }
+        
+        @keyframes change   {
+            0%{
+        background-position: 0 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100%
+    {
+        background-position: 0 50%;
+    }
+}
 
         /**
         * Default styles for xterm.js
